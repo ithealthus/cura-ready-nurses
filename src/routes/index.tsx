@@ -79,7 +79,7 @@ const advantages = [
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
   { icon: Award, title: "Hospital-integrated training", body: "Graduate from a college where the hospital is your classroom — not an afterthought. Cura students build confidence inside real wards from semester one." },
-  { icon: Globe2, title: "International pathway", body: "Built-in IELTS / OET coaching for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
+  { icon: Globe2, title: "International pathway", body: "Guidance & pathway support for IELTS, OET and NCLEX for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
 ];
 
 const salaryLadder = [
