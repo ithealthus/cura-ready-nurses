@@ -287,8 +287,8 @@ function Home() {
           <div>
             <SectionTitle
               eyebrow="Recession-proof careers"
-              title="Hospitals don't shut down."
-              description="You will rarely see a hospital close. India faces a shortfall of over 65 lakh allied healthcare professionals by 2030 — and the demand is in every tier-2 and tier-3 city, not just the metros."
+              title="Healthcare never stops."
+              description="Healthcare demand only grows. India faces a shortfall of over 65 lakh allied healthcare professionals by 2030 — and the demand is in every tier-2 and tier-3 city, not just the metros."
             />
             <ul className="mt-6 space-y-3 text-sm">
               {[
