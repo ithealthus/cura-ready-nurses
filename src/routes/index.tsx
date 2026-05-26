@@ -51,7 +51,7 @@ const stats = [
   { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
-  { value: "1,00,000+", label: "Allied healthcare professionals by 2030" },
+  { value: "1,00,000", label: "Our vision: Allied Healthcare Professionals trained by 2030" },
 ];
 
 // Cura Hospitals ecosystem — sourced from curahospitals.com
