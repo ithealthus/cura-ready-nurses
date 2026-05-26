@@ -122,7 +122,7 @@ export const PROGRAMS: Program[] = [
     whyCura: [
       "Daily clinical exposure inside Cura Hospitals from semester 1 — not just lectures",
       "Dedicated SimMan & OSCE skill labs with senior nurse-educators",
-      "Built-in IELTS, OET & NCLEX coaching for international careers",
+      "Guidance & pathway support for IELTS, OET & NCLEX for international careers",
       "Hospital-integrated training with career-readiness support at Cura Hospitals network",
     ],
     jobRoles: [
