@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -11,6 +12,7 @@ import {
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+
 
 function NotFoundComponent() {
   return (
@@ -89,13 +91,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isLanding = pathname.startsWith("/lp/");
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteHeader />
+      {!isLanding && <SiteHeader />}
       <main>
         <Outlet />
       </main>
-      <SiteFooter />
+      {!isLanding && <SiteFooter />}
     </QueryClientProvider>
   );
 }
+
