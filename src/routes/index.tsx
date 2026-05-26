@@ -230,7 +230,7 @@ function Home() {
             <SectionTitle
               eyebrow="Allied Healthcare programs"
               title="Eight RGUHS degrees. One promise: hire-ready healthcare professionals."
-              description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year hospital internship) — except BPT, our 4½-year doctoral physiotherapy track."
+              description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year internship) — except BPT, our 4½-year doctoral physiotherapy track."
             />
             <Button asChild variant="ghost" className="text-secondary hover:text-secondary/80">
               <Link to="/programs">View all <ArrowRight className="ml-1 h-4 w-4" /></Link>
