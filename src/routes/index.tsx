@@ -32,7 +32,7 @@ const stats = [
   { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
-  { value: "98%", label: "Placement rate" },
+  { value: "1,00,000+", label: "Allied healthcare professionals by 2030" },
 ];
 
 // Cura Hospitals ecosystem — sourced from curahospitals.com
@@ -51,7 +51,7 @@ const learningFlow = [
   { year: "Year 1", title: "Foundation + skill labs", body: "Anatomy, physiology, biochemistry and core allied-health basics, paired with SimMan, OSCE drills and spoken-English coaching." },
   { year: "Year 2", title: "Supervised hospital exposure", body: "Step into Cura Hospitals (Kanakapura Rd & Kammanahalli) as observers — shadow technologists and consultants daily." },
   { year: "Year 3", title: "Department-specific rotations", body: "Rotate through cath-lab, imaging suites, modular OTs, ER, oncology and pathology under structured preceptorship." },
-  { year: "Year 4", title: "Paid hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — most students are hired before convocation." },
+  { year: "Year 4", title: "Paid hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
 ];
 
 const advantages = [
@@ -59,7 +59,7 @@ const advantages = [
   { icon: GraduationCap, title: "RGUHS recognised", body: "Every programme is affiliated to Rajiv Gandhi University of Health Sciences and aligned to NCAHP norms." },
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
-  { icon: Award, title: "Priority hiring at Cura", body: "First right of hire at Cura Hospitals — the same hospital where you trained for 4 years already knows your name." },
+  { icon: Award, title: "Hospital-integrated training", body: "Graduate from a college where the hospital is your classroom — not an afterthought. Cura students build confidence inside real wards from semester one." },
   { icon: Globe2, title: "International pathway", body: "Built-in IELTS / OET coaching for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
 ];
 
@@ -186,8 +186,8 @@ function Home() {
           <SectionTitle
             align="center"
             eyebrow="The 4-year journey"
-            title="From foundation to placement — inside one ecosystem."
-            description="Every semester compounds clinical confidence. By the time most students elsewhere are starting their internship, ours have already worked 600+ hours inside a working hospital."
+            title="From foundation to career — inside one ecosystem."
+            description="Every semester compounds clinical confidence. By the time students elsewhere are starting their internship, ours have already worked 600+ hours inside a working hospital."
           />
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {learningFlow.map((s, i) => (
