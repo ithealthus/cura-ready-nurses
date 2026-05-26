@@ -32,7 +32,7 @@ function About() {
           <div className="mt-5 space-y-4 text-foreground/80">
             <p>Cura Institutions was founded with a single conviction — India's hospitals are short on trained allied-health professionals, and the only way to fix that is to teach inside the wards, OTs and cath-labs where they will eventually work.</p>
             <p>Powered by the Cura Hospitals network and affiliated to <strong>Rajiv Gandhi University of Health Sciences (RGUHS)</strong>, our Hebbal, Bangalore campus runs eight degree programs that combine classroom rigour with real clinical exposure from semester one.</p>
-            <p>Today over 10,000 students have aspired with us — and our graduates are working across multi-speciality hospitals in India, the Gulf and beyond.</p>
+            <p>Our vision is to train 1,00,000 allied healthcare professionals by 2030 — transforming India's healthcare workforce from the ground up.</p>
           </div>
         </div>
         <img src={campusLife} alt="Cura Institutions students" loading="lazy" className="aspect-[5/4] w-full rounded-2xl object-cover shadow-soft" />
@@ -42,7 +42,7 @@ function About() {
         <div className="container mx-auto grid gap-6 px-4 md:grid-cols-3 md:px-8">
           {[
             { icon: Target, title: "Mission", body: "Train clinically-confident, compassionate healthcare professionals India can depend on." },
-            { icon: Heart, title: "Vision", body: "Be South India's most placement-focused, hospital-integrated nursing & allied health college." },
+            { icon: Heart, title: "Vision", body: "Train 1,00,000 Allied Healthcare Professionals by 2030 — transforming India's healthcare workforce from the ground up." },
             { icon: ShieldCheck, title: "Values", body: "Patient-first ethics, academic integrity, lifelong learning, and dignity in care." },
           ].map((c) => (
             <div key={c.title} className="rounded-2xl bg-card p-7 shadow-card">
@@ -62,7 +62,7 @@ function About() {
           {[
             { t: "RGUHS-affiliated", b: "Recognised degrees that travel across India and abroad." },
             { t: "Hospital-integrated", b: "Clinical training inside Cura Hospitals from year one." },
-            { t: "Priority placement", b: "First right of hire at Cura plus 50+ partner hospitals." },
+            { t: "Career-readiness support", b: "Structured internships, interview prep & 50+ partner hospital network." },
             { t: "Industry faculty", b: "Senior consultants, anaesthetists and chief nurses." },
           ].map((x) => (
             <div key={x.t} className="rounded-2xl border border-border bg-card p-6 shadow-card">

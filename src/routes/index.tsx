@@ -312,14 +312,14 @@ function Home() {
         </div>
       </section>
 
-      {/* PLACEMENT NETWORK */}
+      {/* CAREER NETWORK */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Placement network</p>
-              <h2 className="mt-2 text-3xl font-bold md:text-4xl">First right of hire at Cura Hospitals — plus 50+ partner hospitals.</h2>
-              <p className="mt-3 text-white/80">Cura's placement cell engages with hospital HR teams from your second year. By the time you graduate, you've sat for 6–8 interviews, attended 4+ skill-assessment camps and earned BLS / ACLS / radiation-safety certifications relevant to your stream.</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Career network</p>
+              <h2 className="mt-2 text-3xl font-bold md:text-4xl">Cura Hospitals & 50+ partner hospitals — your future workplace.</h2>
+              <p className="mt-3 text-white/80">Cura's career-readiness cell engages with hospital HR teams from your second year. By the time you graduate, you've sat for multiple interviews, attended 4+ skill-assessment camps and earned BLS / ACLS / radiation-safety certifications relevant to your stream.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90"><Link to="/admissions">Apply Now</Link></Button>
                 <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"><Link to="/campus-life">Tour Campus Life</Link></Button>
@@ -336,14 +336,14 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* VISION & VOICE */}
       <section className="container mx-auto px-4 py-20 md:px-8">
-        <SectionTitle align="center" eyebrow="Success stories" title="From classroom to console — in their own words." />
+        <SectionTitle align="center" eyebrow="Our vision" title="Building India's next generation of allied healthcare professionals." />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { name: "Jyoti Singh", role: "BSc CCT, 2024", quote: "I was inside the Cura cath-lab by my second year. I got placed at a leading cardiac hospital before convocation." },
-            { name: "Ravi Kumar", role: "BSc MIT, 2023", quote: "Working alongside Cura's radiologists every week is what made me confident enough to handle CT and MRI consoles on day one of my job." },
-            { name: "Arjun Patel", role: "BPT, 2023", quote: "Beyond textbooks — the hands-on rehab cases at Cura prepared me to start my own clinic back home in Belagavi." },
+            { name: "Dr. Ramesh K", role: "Director, Cura Hospitals", quote: "India does not lack hospitals — it lacks trained technologists to run them. Cura Institutions is our answer: teach inside the wards, not away from them." },
+            { name: "Meena Devi", role: "Parent of BSc Nursing aspirant", quote: "We are a small-town family. For my daughter, Cura means she can study in a real hospital from day one — not just read about it in books. That gives me confidence." },
+            { name: "Prof. Venkatesh", role: "Head of Clinical Training", quote: "By 2030, India will need 65 lakh more allied health workers. Cura's mission is to produce 1,00,000 of them — competent, compassionate and career-ready." },
           ].map((t) => (
             <figure key={t.name} className="rounded-2xl bg-card p-7 shadow-card border border-border">
               <div className="flex gap-1 text-gold">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
