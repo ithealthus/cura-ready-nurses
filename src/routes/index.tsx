@@ -26,10 +26,10 @@ export const Route = createFileRoute("/")({
 });
 
 // Allied Healthcare focus — exclude BSc Nursing
-const ALLIED = PROGRAMS.filter((p) => p.slug !== "bsc-nursing");
+const ALLIED = PROGRAMS;
 
 const stats = [
-  { value: "7", label: "Allied Health degrees" },
+  { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
   { value: "98%", label: "Placement rate" },
