@@ -305,8 +305,9 @@ function Home() {
           <div className="relative">
             <img src={campusLife} alt="Cura Institutions allied health students" loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-gold p-5 text-gold-foreground shadow-soft md:block">
-              <div className="text-2xl font-bold">1,00,000+</div>
-              <div className="text-xs font-medium uppercase tracking-wider">Allied healthcare professionals by 2030</div>
+              <div className="text-[10px] font-semibold uppercase tracking-wider">Cura's vision</div>
+              <div className="mt-1 text-2xl font-bold">1,00,000</div>
+              <div className="text-xs font-medium uppercase tracking-wider">Allied Healthcare Professionals by 2030</div>
             </div>
           </div>
         </div>
