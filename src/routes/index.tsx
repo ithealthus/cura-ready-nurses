@@ -51,7 +51,7 @@ const stats = [
   { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
-  { value: "1,00,000+", label: "Allied healthcare professionals by 2030" },
+  { value: "1,00,000", label: "Our vision: Allied Healthcare Professionals trained by 2030" },
 ];
 
 // Cura Hospitals ecosystem — sourced from curahospitals.com
@@ -79,7 +79,7 @@ const advantages = [
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
   { icon: Award, title: "Hospital-integrated training", body: "Graduate from a college where the hospital is your classroom — not an afterthought. Cura students build confidence inside real wards from semester one." },
-  { icon: Globe2, title: "International pathway", body: "Built-in IELTS / OET coaching for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
+  { icon: Globe2, title: "International pathway", body: "Guidance & pathway support for IELTS, OET and NCLEX for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
 ];
 
 const salaryLadder = [
@@ -305,8 +305,9 @@ function Home() {
           <div className="relative">
             <img src={campusLife} alt="Cura Institutions allied health students" loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-gold p-5 text-gold-foreground shadow-soft md:block">
-              <div className="text-2xl font-bold">1,00,000+</div>
-              <div className="text-xs font-medium uppercase tracking-wider">Allied healthcare professionals by 2030</div>
+              <div className="text-[10px] font-semibold uppercase tracking-wider">Cura's vision</div>
+              <div className="mt-1 text-2xl font-bold">1,00,000</div>
+              <div className="text-xs font-medium uppercase tracking-wider">Allied Healthcare Professionals by 2030</div>
             </div>
           </div>
         </div>
