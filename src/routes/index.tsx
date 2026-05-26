@@ -55,7 +55,7 @@ const learningFlow = [
 ];
 
 const advantages = [
-  { icon: Hospital, title: "Allied-only focus", body: "Cura Institutions is built around 7 RGUHS Allied Healthcare degrees — not a general college that offers them on the side." },
+  { icon: Hospital, title: "Allied-only focus", body: "Cura Institutions is built around 8 RGUHS Allied Healthcare degrees — not a general college that offers them on the side." },
   { icon: GraduationCap, title: "RGUHS recognised", body: "Every programme is affiliated to Rajiv Gandhi University of Health Sciences and aligned to NCAHP norms." },
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
