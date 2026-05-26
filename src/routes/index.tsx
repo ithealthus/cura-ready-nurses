@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Cura Institutions — Allied Healthcare Degrees, Bangalore" },
-      { name: "description", content: "Bangalore's only Allied Healthcare college built inside the Cura Hospitals network. 7 RGUHS-affiliated allied health degrees with live ICU, OT, cath-lab and lab rotations from semester one." },
+      { name: "description", content: "Bangalore's only Allied Healthcare college built inside the Cura Hospitals network. 8 RGUHS-affiliated allied health degrees with live ICU, OT, cath-lab and lab rotations from semester one." },
       { property: "og:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
       { property: "og:url", content: "/" },
@@ -26,10 +26,10 @@ export const Route = createFileRoute("/")({
 });
 
 // Allied Healthcare focus — exclude BSc Nursing
-const ALLIED = PROGRAMS.filter((p) => p.slug !== "bsc-nursing");
+const ALLIED = PROGRAMS;
 
 const stats = [
-  { value: "7", label: "Allied Health degrees" },
+  { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
   { value: "98%", label: "Placement rate" },
@@ -55,7 +55,7 @@ const learningFlow = [
 ];
 
 const advantages = [
-  { icon: Hospital, title: "Allied-only focus", body: "Cura Institutions is built around 7 RGUHS Allied Healthcare degrees — not a general college that offers them on the side." },
+  { icon: Hospital, title: "Allied-only focus", body: "Cura Institutions is built around 8 RGUHS Allied Healthcare degrees — not a general college that offers them on the side." },
   { icon: GraduationCap, title: "RGUHS recognised", body: "Every programme is affiliated to Rajiv Gandhi University of Health Sciences and aligned to NCAHP norms." },
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
@@ -91,14 +91,14 @@ function Home() {
               <span className="block text-gold">built inside Cura Hospitals.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/85">
-              7 RGUHS-affiliated Allied Healthcare degrees — Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Technology and Physiotherapy — trained inside the <strong className="text-gold">Cura Hospitals</strong> multi-speciality network (Kanakapura Road & Kammanahalli). Your child doesn't visit a hospital as a guest; they grow up in one.
+              8 RGUHS-affiliated Allied Healthcare degrees — Nursing, Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Technology and Physiotherapy — trained inside the <strong className="text-gold">Cura Hospitals</strong> multi-speciality network (Kanakapura Road & Kammanahalli). Your child doesn't visit a hospital as a guest; they grow up in one.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
                 <Link to="/admissions">Start Your Application <ArrowRight className="ml-1" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white">
-                <Link to="/programs">Explore 7 Allied Programs</Link>
+                <Link to="/programs">Explore 8 Allied Programs</Link>
               </Button>
             </div>
             <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4">
@@ -229,7 +229,7 @@ function Home() {
           <div className="flex items-end justify-between gap-6 flex-wrap">
             <SectionTitle
               eyebrow="Allied Healthcare programs"
-              title="Seven RGUHS degrees. One promise: hire-ready technologists."
+              title="Eight RGUHS degrees. One promise: hire-ready healthcare professionals."
               description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year paid hospital internship) — except BPT, our 4½-year doctoral physiotherapy track."
             />
             <Button asChild variant="ghost" className="text-secondary hover:text-secondary/80">
