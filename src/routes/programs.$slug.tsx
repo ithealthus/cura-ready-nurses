@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, Briefcase, BookOpen, Award } from "lucide-react";
-import { getProgram, PROGRAMS } from "@/lib/programs";
+import { getProgram, PROGRAMS, type Program } from "@/lib/programs";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/programs/$slug")({
 });
 
 function ProgramDetail() {
-  const { program: p } = Route.useLoaderData();
+  const { program: p } = Route.useLoaderData() as { program: Program };
 
   return (
     <>
