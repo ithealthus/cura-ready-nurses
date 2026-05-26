@@ -67,7 +67,7 @@ export const PROGRAMS: Program[] = [
       "Mental Health & Nursing Research",
       "1 Year Mandatory Clinical Internship",
     ],
-    startingSalary: "₹3.0 – 4.5 LPA (India, fresher)",
+    startingSalary: "₹2.4 – 3.6 LPA (India, fresher)",
     experiencedSalary: "₹6 – 12 LPA (5+ years, ICU / Speciality)",
     internationalSalary: "₹25 – 60 LPA (UK, Germany, Gulf after NCLEX / OET)",
     marketStats: [
@@ -175,7 +175,7 @@ export const PROGRAMS: Program[] = [
       "Radiation Safety & QA",
       "1 Year Hospital Internship",
     ],
-    startingSalary: "₹3.0 – 4.5 LPA",
+    startingSalary: "₹2.4 – 3.6 LPA",
     experiencedSalary: "₹7 – 14 LPA (CT/MRI specialists)",
     internationalSalary: "₹35 – 70 LPA (Gulf, Singapore, Australia)",
     marketStats: [
@@ -283,7 +283,7 @@ export const PROGRAMS: Program[] = [
       "Emergency & Critical Care",
       "1 Year OT Internship",
     ],
-    startingSalary: "₹3.0 – 4.2 LPA",
+    startingSalary: "₹2.2 – 3.4 LPA",
     experiencedSalary: "₹6 – 11 LPA (Cardiac / Neuro OT)",
     internationalSalary: "₹25 – 50 LPA (Gulf surgical centres)",
     marketStats: [
@@ -391,7 +391,7 @@ export const PROGRAMS: Program[] = [
       "Cardiac Pharmacology & Emergencies",
       "1 Year Cath-Lab Internship",
     ],
-    startingSalary: "₹3.5 – 5.0 LPA",
+    startingSalary: "₹2.6 – 4.0 LPA",
     experiencedSalary: "₹8 – 16 LPA (Cath-lab senior)",
     internationalSalary: "₹40 – 80 LPA (Gulf cardiac centres)",
     marketStats: [
@@ -499,7 +499,7 @@ export const PROGRAMS: Program[] = [
       "Radiation Protection",
       "1 Year Oncology Internship",
     ],
-    startingSalary: "₹4 – 5.5 LPA",
+    startingSalary: "₹3.0 – 4.5 LPA",
     experiencedSalary: "₹9 – 18 LPA (LINAC senior)",
     internationalSalary: "₹45 – 90 LPA (Gulf, Singapore oncology)",
     marketStats: [
@@ -607,7 +607,7 @@ export const PROGRAMS: Program[] = [
       "Critical Care Procedures",
       "1 Year ER & Trauma Internship",
     ],
-    startingSalary: "₹3.0 – 4.5 LPA",
+    startingSalary: "₹2.4 – 3.6 LPA",
     experiencedSalary: "₹7 – 13 LPA",
     internationalSalary: "₹30 – 60 LPA (Gulf, offshore rigs, cruise lines)",
     marketStats: [
@@ -715,7 +715,7 @@ export const PROGRAMS: Program[] = [
       "Molecular Diagnostics & QC",
       "1 Year Lab Internship",
     ],
-    startingSalary: "₹2.8 – 4.2 LPA",
+    startingSalary: "₹2.0 – 3.2 LPA",
     experiencedSalary: "₹6 – 12 LPA (Senior / NABL roles)",
     internationalSalary: "₹25 – 55 LPA (Gulf, Singapore)",
     marketStats: [
@@ -823,7 +823,7 @@ export const PROGRAMS: Program[] = [
       "Sports & Community Physiotherapy",
       "6 Months Clinical Internship",
     ],
-    startingSalary: "₹3.0 – 4.8 LPA (hospital), ₹500–₹1,500/session (private)",
+    startingSalary: "₹2.4 – 3.6 LPA (hospital), ₹300–₹800/session (private)",
     experiencedSalary: "₹8 – 18 LPA (Senior / Sports / Neuro)",
     internationalSalary: "₹40 – 90 LPA (Australia, UK, Gulf)",
     marketStats: [
