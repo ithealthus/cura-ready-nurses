@@ -229,7 +229,7 @@ function Home() {
           <div className="flex items-end justify-between gap-6 flex-wrap">
             <SectionTitle
               eyebrow="Allied Healthcare programs"
-              title="Seven RGUHS degrees. One promise: hire-ready technologists."
+              title="Eight RGUHS degrees. One promise: hire-ready healthcare professionals."
               description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year paid hospital internship) — except BPT, our 4½-year doctoral physiotherapy track."
             />
             <Button asChild variant="ghost" className="text-secondary hover:text-secondary/80">
