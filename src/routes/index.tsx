@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Cura Institutions — Allied Healthcare Degrees, Bangalore" },
-      { name: "description", content: "Bangalore's only Allied Healthcare college built inside the Cura Hospitals network. 7 RGUHS-affiliated allied health degrees with live ICU, OT, cath-lab and lab rotations from semester one." },
+      { name: "description", content: "Bangalore's only Allied Healthcare college built inside the Cura Hospitals network. 8 RGUHS-affiliated allied health degrees with live ICU, OT, cath-lab and lab rotations from semester one." },
       { property: "og:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
       { property: "og:url", content: "/" },
