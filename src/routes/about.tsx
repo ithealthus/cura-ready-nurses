@@ -42,7 +42,7 @@ function About() {
         <div className="container mx-auto grid gap-6 px-4 md:grid-cols-3 md:px-8">
           {[
             { icon: Target, title: "Mission", body: "Train clinically-confident, compassionate healthcare professionals India can depend on." },
-            { icon: Heart, title: "Vision", body: "Train 1,00,000 Allied Healthcare Professionals by 2030 — transforming India's healthcare workforce from the ground up." },
+            { icon: Heart, title: "Vision", body: "Cura's vision is to train 1,00,000 Allied Healthcare Professionals by 2030 — transforming India's healthcare workforce from the ground up." },
             { icon: ShieldCheck, title: "Values", body: "Patient-first ethics, academic integrity, lifelong learning, and dignity in care." },
           ].map((c) => (
             <div key={c.title} className="rounded-2xl bg-card p-7 shadow-card">
