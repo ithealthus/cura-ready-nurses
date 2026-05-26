@@ -51,7 +51,7 @@ function Admissions() {
             </div>
 
             <div className="mt-12">
-              <SectionTitle eyebrow="Eligibility" title="Program-wise eligibility & duration." />
+              <SectionTitle eyebrow="Eligibility" title="Program-wise eligibility, duration & overall tuition fee." />
               <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-card">
                 <table className="w-full text-left text-sm">
                   <thead className="bg-primary text-primary-foreground">
@@ -59,6 +59,7 @@ function Admissions() {
                       <th className="px-4 py-3">Program</th>
                       <th className="px-4 py-3">Duration</th>
                       <th className="px-4 py-3">Eligibility</th>
+                      <th className="px-4 py-3">Overall Tuition Fee</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -67,6 +68,7 @@ function Admissions() {
                         <td className="px-4 py-3 font-medium text-primary">{p.name}</td>
                         <td className="px-4 py-3 text-foreground/80">{p.duration}</td>
                         <td className="px-4 py-3 text-foreground/80">{p.eligibility}</td>
+                        <td className="px-4 py-3 font-medium text-secondary">{p.fees[0]?.value ?? "—"}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -98,7 +100,7 @@ function Admissions() {
                 <h3 className="text-lg font-semibold text-primary">Fees & Scholarships</h3>
               </div>
               <p className="mt-2 text-sm text-foreground/80">
-                Transparent fee structure with EMI options through partner banks. Merit & need-based scholarships available — speak with our counsellor for program-wise details.
+                Above tuition fees are for the complete program, exclusive of hostel accommodation. EMI options available through partner banks. Merit & need-based scholarships offered — speak with our counsellor for program-wise details.
               </p>
             </div>
           </div>
