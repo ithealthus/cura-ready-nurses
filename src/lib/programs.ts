@@ -139,10 +139,7 @@ export const PROGRAMS: Program[] = [
       "International — NHS UK, Gulf groups, German hospitals",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹85,000 – ₹1,10,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC, Single-girl-child" },
+      { label: "Overall Tuition Fee", value: "₹10,00,000 for the full 4-year program" },
     ],
   },
   {
