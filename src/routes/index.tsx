@@ -51,7 +51,7 @@ const learningFlow = [
   { year: "Year 1", title: "Foundation + skill labs", body: "Anatomy, physiology, biochemistry and core allied-health basics, paired with SimMan, OSCE drills and spoken-English coaching." },
   { year: "Year 2", title: "Supervised hospital exposure", body: "Step into Cura Hospitals (Kanakapura Rd & Kammanahalli) as observers — shadow technologists and consultants daily." },
   { year: "Year 3", title: "Department-specific rotations", body: "Rotate through cath-lab, imaging suites, modular OTs, ER, oncology and pathology under structured preceptorship." },
-  { year: "Year 4", title: "Paid hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
+  { year: "Year 4", title: "Hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
 ];
 
 const advantages = [
@@ -230,7 +230,7 @@ function Home() {
             <SectionTitle
               eyebrow="Allied Healthcare programs"
               title="Eight RGUHS degrees. One promise: hire-ready healthcare professionals."
-              description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year paid hospital internship) — except BPT, our 4½-year doctoral physiotherapy track."
+              description="Each programme is a 4-year degree (3 years classroom inside Cura's clinical labs + 1 year hospital internship) — except BPT, our 4½-year doctoral physiotherapy track."
             />
             <Button asChild variant="ghost" className="text-secondary hover:text-secondary/80">
               <Link to="/programs">View all <ArrowRight className="ml-1 h-4 w-4" /></Link>
