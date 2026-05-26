@@ -16,11 +16,30 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Cura Institutions — Allied Healthcare Degrees, Bangalore" },
       { name: "description", content: "Bangalore's only Allied Healthcare college built inside the Cura Hospitals network. 8 RGUHS-affiliated allied health degrees with live ICU, OT, cath-lab and lab rotations from semester one." },
+      { name: "keywords", content: "allied healthcare, BSc Nursing, MIT, AOTT, cardiac care, radiotherapy, emergency care, MLT, BPT, RGUHS, Bangalore, healthcare college, Cura Hospitals" },
+      { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/" },
+      { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        name: "Cura Institutions",
+        description: "RGUHS-affiliated allied healthcare college in Bangalore, offering BSc Nursing, MIT, AOTT, Cardiac Care, Radiotherapy, ETCT, MLT and BPT inside the Cura Hospitals network.",
+        url: "https://cura-ready-nurses.lovable.app",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Hebbal",
+          addressRegion: "Karnataka",
+          addressCountry: "IN",
+        },
+      }),
+    }],
   }),
   component: Home,
 });
