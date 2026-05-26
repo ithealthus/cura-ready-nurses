@@ -244,10 +244,7 @@ export const PROGRAMS: Program[] = [
       "District government hospitals (PMJAY)",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹75,000 – ₹95,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -352,10 +349,7 @@ export const PROGRAMS: Program[] = [
       "Gulf surgical hospitals",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹70,000 – ₹90,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -460,10 +454,7 @@ export const PROGRAMS: Program[] = [
       "Tier-2 cardiac centres across Karnataka",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹85,000 – ₹1,10,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -568,10 +559,7 @@ export const PROGRAMS: Program[] = [
       "International — King Faisal (Saudi), Tawam (UAE)",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹90,000 – ₹1,20,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -676,10 +664,7 @@ export const PROGRAMS: Program[] = [
       "Indian Armed Forces, BSF, CISF medical teams",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹70,000 – ₹90,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -784,10 +769,7 @@ export const PROGRAMS: Program[] = [
       "Government — KPSC, NHM, ESI",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹65,000 – ₹85,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹7,20,000 for the full 4-year program" },
     ],
   },
   {
@@ -892,10 +874,7 @@ export const PROGRAMS: Program[] = [
       "Home-care chains — Portea, HealthCare atHOME",
     ],
     fees: [
-      { label: "Annual Tuition", value: "₹95,000 – ₹1,25,000" },
-      { label: "Hostel & Mess (per year)", value: "₹70,000 – ₹85,000" },
-      { label: "One-time Admission", value: "₹15,000" },
-      { label: "Scholarships", value: "Merit, SC/ST/OBC" },
+      { label: "Overall Tuition Fee", value: "₹10,00,000 for the full 4.5-year program" },
     ],
   },
 ];
