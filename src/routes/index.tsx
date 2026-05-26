@@ -64,10 +64,10 @@ const advantages = [
 ];
 
 const salaryLadder = [
-  { stage: "Fresher (0–1 yr)", value: "₹3 – 5 LPA" },
-  { stage: "Mid (3–5 yrs)", value: "₹6 – 12 LPA" },
-  { stage: "Senior (8+ yrs)", value: "₹14 – 25 LPA" },
-  { stage: "International (post licensure)", value: "₹35 – 90 LPA" },
+  { stage: "Fresher (0–1 yr)", value: "₹1.8 – 3 LPA" },
+  { stage: "Mid (3–5 yrs)", value: "₹4 – 8 LPA" },
+  { stage: "Senior (8+ yrs)", value: "₹10 – 18 LPA" },
+  { stage: "International (post licensure)", value: "₹25 – 60 LPA" },
 ];
 
 function Home() {
