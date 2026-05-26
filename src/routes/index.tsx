@@ -91,14 +91,14 @@ function Home() {
               <span className="block text-gold">built inside Cura Hospitals.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/85">
-              7 RGUHS-affiliated Allied Healthcare degrees — Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Technology and Physiotherapy — trained inside the <strong className="text-gold">Cura Hospitals</strong> multi-speciality network (Kanakapura Road & Kammanahalli). Your child doesn't visit a hospital as a guest; they grow up in one.
+              8 RGUHS-affiliated Allied Healthcare degrees — Nursing, Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Technology and Physiotherapy — trained inside the <strong className="text-gold">Cura Hospitals</strong> multi-speciality network (Kanakapura Road & Kammanahalli). Your child doesn't visit a hospital as a guest; they grow up in one.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
                 <Link to="/admissions">Start Your Application <ArrowRight className="ml-1" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white">
-                <Link to="/programs">Explore 7 Allied Programs</Link>
+                <Link to="/programs">Explore 8 Allied Programs</Link>
               </Button>
             </div>
             <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4">
