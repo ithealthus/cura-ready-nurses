@@ -112,7 +112,7 @@ export const PROGRAMS: Program[] = [
       },
       {
         q: "Is BSc Nursing valid abroad?",
-        a: "Yes — an RGUHS BSc Nursing degree is accepted by the UK NMC, German Anerkennung, Saudi SCFHS and UAE DoH after the licensing exam. Cura's curriculum includes IELTS / OET coaching to support international migration.",
+        a: "Yes — an RGUHS BSc Nursing degree is accepted by the UK NMC, German Anerkennung, Saudi SCFHS and UAE DoH after the licensing exam. Cura offers guidance and pathway support for IELTS / OET to help with international migration.",
       },
       {
         q: "What if my child changes their mind after 2 years?",
