@@ -16,6 +16,9 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
+import { Route as LpBscNursingSecureCareerRouteImport } from './routes/lp.bsc-nursing-secure-career'
+import { Route as LpBscNursingNeetAlternativeRouteImport } from './routes/lp.bsc-nursing-neet-alternative'
+import { Route as LpBscNursingDirectRouteImport } from './routes/lp.bsc-nursing-direct'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -52,6 +55,23 @@ const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   path: '/programs/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LpBscNursingSecureCareerRoute =
+  LpBscNursingSecureCareerRouteImport.update({
+    id: '/lp/bsc-nursing-secure-career',
+    path: '/lp/bsc-nursing-secure-career',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LpBscNursingNeetAlternativeRoute =
+  LpBscNursingNeetAlternativeRouteImport.update({
+    id: '/lp/bsc-nursing-neet-alternative',
+    path: '/lp/bsc-nursing-neet-alternative',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LpBscNursingDirectRoute = LpBscNursingDirectRouteImport.update({
+  id: '/lp/bsc-nursing-direct',
+  path: '/lp/bsc-nursing-direct',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,6 +79,9 @@ export interface FileRoutesByFullPath {
   '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
+  '/lp/bsc-nursing-neet-alternative': typeof LpBscNursingNeetAlternativeRoute
+  '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -68,6 +91,9 @@ export interface FileRoutesByTo {
   '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
+  '/lp/bsc-nursing-neet-alternative': typeof LpBscNursingNeetAlternativeRoute
+  '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -78,6 +104,9 @@ export interface FileRoutesById {
   '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
+  '/lp/bsc-nursing-neet-alternative': typeof LpBscNursingNeetAlternativeRoute
+  '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -89,6 +118,9 @@ export interface FileRouteTypes {
     | '/admissions'
     | '/campus-life'
     | '/contact'
+    | '/lp/bsc-nursing-direct'
+    | '/lp/bsc-nursing-neet-alternative'
+    | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +130,9 @@ export interface FileRouteTypes {
     | '/admissions'
     | '/campus-life'
     | '/contact'
+    | '/lp/bsc-nursing-direct'
+    | '/lp/bsc-nursing-neet-alternative'
+    | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs'
   id:
@@ -107,6 +142,9 @@ export interface FileRouteTypes {
     | '/admissions'
     | '/campus-life'
     | '/contact'
+    | '/lp/bsc-nursing-direct'
+    | '/lp/bsc-nursing-neet-alternative'
+    | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -117,6 +155,9 @@ export interface RootRouteChildren {
   AdmissionsRoute: typeof AdmissionsRoute
   CampusLifeRoute: typeof CampusLifeRoute
   ContactRoute: typeof ContactRoute
+  LpBscNursingDirectRoute: typeof LpBscNursingDirectRoute
+  LpBscNursingNeetAlternativeRoute: typeof LpBscNursingNeetAlternativeRoute
+  LpBscNursingSecureCareerRoute: typeof LpBscNursingSecureCareerRoute
   ProgramsSlugRoute: typeof ProgramsSlugRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
 }
@@ -172,6 +213,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lp/bsc-nursing-secure-career': {
+      id: '/lp/bsc-nursing-secure-career'
+      path: '/lp/bsc-nursing-secure-career'
+      fullPath: '/lp/bsc-nursing-secure-career'
+      preLoaderRoute: typeof LpBscNursingSecureCareerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/bsc-nursing-neet-alternative': {
+      id: '/lp/bsc-nursing-neet-alternative'
+      path: '/lp/bsc-nursing-neet-alternative'
+      fullPath: '/lp/bsc-nursing-neet-alternative'
+      preLoaderRoute: typeof LpBscNursingNeetAlternativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/bsc-nursing-direct': {
+      id: '/lp/bsc-nursing-direct'
+      path: '/lp/bsc-nursing-direct'
+      fullPath: '/lp/bsc-nursing-direct'
+      preLoaderRoute: typeof LpBscNursingDirectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -181,9 +243,22 @@ const rootRouteChildren: RootRouteChildren = {
   AdmissionsRoute: AdmissionsRoute,
   CampusLifeRoute: CampusLifeRoute,
   ContactRoute: ContactRoute,
+  LpBscNursingDirectRoute: LpBscNursingDirectRoute,
+  LpBscNursingNeetAlternativeRoute: LpBscNursingNeetAlternativeRoute,
+  LpBscNursingSecureCareerRoute: LpBscNursingSecureCareerRoute,
   ProgramsSlugRoute: ProgramsSlugRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
