@@ -51,7 +51,7 @@ export const PROGRAMS: Program[] = [
       "RGUHS-affiliated curriculum",
       "Hands-on rotations across ICU, OBG, Paediatrics, OT & Community",
       "Skill labs with SimMan, OSCE training & Spoken-English coaching",
-      "Priority placement at Cura Hospitals & 50+ partner hospitals",
+      "Career-readiness support through Cura Hospitals & 50+ partner hospitals",
     ],
     careers: [
       "Staff Nurse — Multi-speciality hospitals",
@@ -123,7 +123,7 @@ export const PROGRAMS: Program[] = [
       "Daily clinical exposure inside Cura Hospitals from semester 1 — not just lectures",
       "Dedicated SimMan & OSCE skill labs with senior nurse-educators",
       "Built-in IELTS, OET & NCLEX coaching for international careers",
-      "Priority hiring at the Cura Hospitals network — written placement support",
+      "Hospital-integrated training with career-readiness support at Cura Hospitals network",
     ],
     jobRoles: [
       "Staff Nurse (ICU / OT / Ward / Casualty)",
@@ -198,7 +198,7 @@ export const PROGRAMS: Program[] = [
       {
         title: "Cath-lab specialist",
         story:
-          "An MIT graduate trained in Cura's cath-lab cleared a Bangalore tertiary hospital interview in his 4th year — joined at ₹40,000/month before convocation.",
+          "After 4 years of cath-lab training at Cura, graduates are positioned for interviews at leading Bangalore tertiary hospitals — starting salaries in the ₹3.0–4.5 LPA range.",
       },
     ],
     objections: [
@@ -224,14 +224,14 @@ export const PROGRAMS: Program[] = [
       },
       {
         q: "Why not just do BSc Physics?",
-        a: "BSc Physics has no direct healthcare placement. BSc MIT is RGUHS-recognised, clinical, and gets placed within the imaging industry from day one of internship.",
+        a: "BSc Physics has no direct healthcare career path. BSc MIT is RGUHS-recognised, clinical, and opens imaging industry roles from day one of internship.",
       },
     ],
     whyCura: [
       "Daily hands-on time on live CT, MRI, X-Ray & USG machines",
       "Cath-lab rotation — rare even in older imaging colleges",
       "AERB-aligned radiation-safety training",
-      "Tie-ups with diagnostic chains for guaranteed internship",
+      "Tie-ups with diagnostic chains for structured internship",
     ],
     jobRoles: [
       "X-Ray / CT / MRI Technologist",
@@ -262,7 +262,7 @@ export const PROGRAMS: Program[] = [
     image: aottImg,
     tagline: "The surgeon's most trusted partner.",
     about:
-      "Train inside live operation theatres — assist anaesthetists, manage OT equipment, and learn sterile-zone protocols used in modern surgery. With 50,000+ new surgical beds added each year, AOTT graduates are among the fastest-hired allied-health professionals in India.",
+      "Train inside live operation theatres — assist anaesthetists, manage OT equipment, and learn sterile-zone protocols used in modern surgery. With 50,000+ new surgical beds added each year, AOTT graduates are among the most in-demand allied-health professionals in India.",
     highlights: [
       "Rotations across General, Ortho, Cardiac & Neuro OTs",
       "Live anaesthesia machine & ventilator training",
@@ -447,7 +447,7 @@ export const PROGRAMS: Program[] = [
       "Live cath-lab rotation — rare in any undergraduate programme",
       "Echo / TMT / Holter labs on campus",
       "Senior interventional cardiologists as faculty",
-      "Direct hiring pipeline into Cura's cardiac centres",
+      "Direct career pathway into Cura's cardiac centres",
     ],
     jobRoles: [
       "Cath-Lab Technologist (Diagnostic & Interventional)",
@@ -552,7 +552,7 @@ export const PROGRAMS: Program[] = [
       },
     ],
     whyCura: [
-      "Tie-ups with leading oncology centres for internship & placement",
+      "Tie-ups with leading oncology centres for internship & career opportunities",
       "LINAC & CT-Simulator training in 4th year",
       "Senior radiation oncologists as guest faculty",
       "Built-in AERB radiation-safety certification",
@@ -663,7 +663,7 @@ export const PROGRAMS: Program[] = [
       "ATLS/ACLS-aligned curriculum taught by emergency-medicine consultants",
       "Live ambulance & trauma-bay rotation from semester 3",
       "Disaster-management modules with field simulation",
-      "Built-in placement into 108 / GVK-EMRI network",
+      "Built-in career pathway into 108 / GVK-EMRI network",
     ],
     jobRoles: [
       "ER / Casualty Technologist",
@@ -694,7 +694,7 @@ export const PROGRAMS: Program[] = [
     image: mltImg,
     tagline: "70% of clinical decisions begin in the lab.",
     about:
-      "Become a clinical lab scientist — run pathology, biochemistry, microbiology and molecular diagnostics that power every diagnosis. With India's diagnostic industry growing at 15%+ YoY, MLT graduates are hired across hospitals, chains and biotech.",
+      "Become a clinical lab scientist — run pathology, biochemistry, microbiology and molecular diagnostics that power every diagnosis. With India's diagnostic industry growing at 15%+ YoY, MLT graduates are in demand across hospitals, diagnostic chains and biotech.",
     highlights: [
       "Hands-on training in Pathology, Biochem, Microbiology, Histo",
       "Molecular diagnostics & blood-bank modules",
@@ -771,7 +771,7 @@ export const PROGRAMS: Program[] = [
       "Full pathology, biochem, microbiology, histo & molecular labs on campus",
       "Internship inside NABL-accredited hospital labs",
       "Blood-bank rotation in 3rd year",
-      "Direct tie-ups with diagnostic chains for placement",
+      "Direct tie-ups with diagnostic chains for internships & career opportunities",
     ],
     jobRoles: [
       "Medical Lab Technologist (Path / Biochem / Micro)",
@@ -828,7 +828,7 @@ export const PROGRAMS: Program[] = [
     internationalSalary: "₹40 – 90 LPA (Australia, UK, Gulf)",
     marketStats: [
       "India has only 0.59 physios per 10,000 people vs WHO norm of 1 per 10,000",
-      "India's home-healthcare market growing 22% YoY — physio is the #1 hired role",
+      "India's home-healthcare market growing 22% YoY — physio is the #1 in-demand role",
       "Sports injuries, post-COVID rehab and elderly care driving 15%+ annual demand",
       "Australia, UK, Canada actively recruiting Indian physios after licensure",
     ],
