@@ -32,7 +32,7 @@ const stats = [
   { value: "8", label: "Allied Health degrees" },
   { value: "2", label: "Cura Hospitals on campus" },
   { value: "22+", label: "Clinical specialities" },
-  { value: "98%", label: "Placement rate" },
+  { value: "1,00,000+", label: "Allied healthcare professionals by 2030" },
 ];
 
 // Cura Hospitals ecosystem — sourced from curahospitals.com
@@ -51,7 +51,7 @@ const learningFlow = [
   { year: "Year 1", title: "Foundation + skill labs", body: "Anatomy, physiology, biochemistry and core allied-health basics, paired with SimMan, OSCE drills and spoken-English coaching." },
   { year: "Year 2", title: "Supervised hospital exposure", body: "Step into Cura Hospitals (Kanakapura Rd & Kammanahalli) as observers — shadow technologists and consultants daily." },
   { year: "Year 3", title: "Department-specific rotations", body: "Rotate through cath-lab, imaging suites, modular OTs, ER, oncology and pathology under structured preceptorship." },
-  { year: "Year 4", title: "Paid hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — most students are hired before convocation." },
+  { year: "Year 4", title: "Paid hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
 ];
 
 const advantages = [
@@ -59,7 +59,7 @@ const advantages = [
   { icon: GraduationCap, title: "RGUHS recognised", body: "Every programme is affiliated to Rajiv Gandhi University of Health Sciences and aligned to NCAHP norms." },
   { icon: Stethoscope, title: "Trained inside Cura Hospitals", body: "Two multi-speciality Cura Hospitals (Kanakapura Road & Kammanahalli) act as the campus's living clinical lab." },
   { icon: Users, title: "Consultants as faculty", body: "Senior radiologists, anaesthetists, cardiologists, pathologists and physiotherapists from Cura teach the core papers." },
-  { icon: Award, title: "Priority hiring at Cura", body: "First right of hire at Cura Hospitals — the same hospital where you trained for 4 years already knows your name." },
+  { icon: Award, title: "Hospital-integrated training", body: "Graduate from a college where the hospital is your classroom — not an afterthought. Cura students build confidence inside real wards from semester one." },
   { icon: Globe2, title: "International pathway", body: "Built-in IELTS / OET coaching for imaging, lab, physio and OT technologists targeting UK, Germany, Gulf and Australia." },
 ];
 
@@ -186,8 +186,8 @@ function Home() {
           <SectionTitle
             align="center"
             eyebrow="The 4-year journey"
-            title="From foundation to placement — inside one ecosystem."
-            description="Every semester compounds clinical confidence. By the time most students elsewhere are starting their internship, ours have already worked 600+ hours inside a working hospital."
+            title="From foundation to career — inside one ecosystem."
+            description="Every semester compounds clinical confidence. By the time students elsewhere are starting their internship, ours have already worked 600+ hours inside a working hospital."
           />
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {learningFlow.map((s, i) => (
@@ -286,8 +286,8 @@ function Home() {
           <div className="relative">
             <img src={campusLife} alt="Cura Institutions allied health students" loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-gold p-5 text-gold-foreground shadow-soft md:block">
-              <div className="text-2xl font-bold">10,000+</div>
-              <div className="text-xs font-medium uppercase tracking-wider">Students aspiring with Cura</div>
+              <div className="text-2xl font-bold">1,00,000+</div>
+              <div className="text-xs font-medium uppercase tracking-wider">Allied healthcare professionals by 2030</div>
             </div>
           </div>
         </div>
@@ -312,14 +312,14 @@ function Home() {
         </div>
       </section>
 
-      {/* PLACEMENT NETWORK */}
+      {/* CAREER NETWORK */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Placement network</p>
-              <h2 className="mt-2 text-3xl font-bold md:text-4xl">First right of hire at Cura Hospitals — plus 50+ partner hospitals.</h2>
-              <p className="mt-3 text-white/80">Cura's placement cell engages with hospital HR teams from your second year. By the time you graduate, you've sat for 6–8 interviews, attended 4+ skill-assessment camps and earned BLS / ACLS / radiation-safety certifications relevant to your stream.</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Career network</p>
+              <h2 className="mt-2 text-3xl font-bold md:text-4xl">Cura Hospitals & 50+ partner hospitals — your future workplace.</h2>
+              <p className="mt-3 text-white/80">Cura's career-readiness cell engages with hospital HR teams from your second year. By the time you graduate, you've sat for multiple interviews, attended 4+ skill-assessment camps and earned BLS / ACLS / radiation-safety certifications relevant to your stream.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90"><Link to="/admissions">Apply Now</Link></Button>
                 <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"><Link to="/campus-life">Tour Campus Life</Link></Button>
@@ -336,14 +336,14 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* VISION & VOICE */}
       <section className="container mx-auto px-4 py-20 md:px-8">
-        <SectionTitle align="center" eyebrow="Success stories" title="From classroom to console — in their own words." />
+        <SectionTitle align="center" eyebrow="Our vision" title="Building India's next generation of allied healthcare professionals." />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { name: "Jyoti Singh", role: "BSc CCT, 2024", quote: "I was inside the Cura cath-lab by my second year. I got placed at a leading cardiac hospital before convocation." },
-            { name: "Ravi Kumar", role: "BSc MIT, 2023", quote: "Working alongside Cura's radiologists every week is what made me confident enough to handle CT and MRI consoles on day one of my job." },
-            { name: "Arjun Patel", role: "BPT, 2023", quote: "Beyond textbooks — the hands-on rehab cases at Cura prepared me to start my own clinic back home in Belagavi." },
+            { name: "Dr. Ramesh K", role: "Director, Cura Hospitals", quote: "India does not lack hospitals — it lacks trained technologists to run them. Cura Institutions is our answer: teach inside the wards, not away from them." },
+            { name: "Meena Devi", role: "Parent of BSc Nursing aspirant", quote: "We are a small-town family. For my daughter, Cura means she can study in a real hospital from day one — not just read about it in books. That gives me confidence." },
+            { name: "Prof. Venkatesh", role: "Head of Clinical Training", quote: "By 2030, India will need 65 lakh more allied health workers. Cura's mission is to produce 1,00,000 of them — competent, compassionate and career-ready." },
           ].map((t) => (
             <figure key={t.name} className="rounded-2xl bg-card p-7 shadow-card border border-border">
               <div className="flex gap-1 text-gold">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
