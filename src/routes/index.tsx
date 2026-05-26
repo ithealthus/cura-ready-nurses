@@ -51,7 +51,7 @@ const learningFlow = [
   { year: "Year 1", title: "Foundation + skill labs", body: "Anatomy, physiology, biochemistry and core allied-health basics, paired with SimMan, OSCE drills and spoken-English coaching." },
   { year: "Year 2", title: "Supervised hospital exposure", body: "Step into Cura Hospitals (Kanakapura Rd & Kammanahalli) as observers — shadow technologists and consultants daily." },
   { year: "Year 3", title: "Department-specific rotations", body: "Rotate through cath-lab, imaging suites, modular OTs, ER, oncology and pathology under structured preceptorship." },
-  { year: "Year 4", title: "Hospital internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
+  { year: "Year 4", title: "Internship", body: "1-year mandatory internship inside Cura Hospitals or partner network — designed to convert into full-time roles for performing graduates." },
 ];
 
 const advantages = [
