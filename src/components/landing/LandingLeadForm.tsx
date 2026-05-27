@@ -12,7 +12,8 @@ type Props = {
 };
 
 type FormState = {
-  name: string;
+  firstName: string;
+  lastName: string;
   phone: string;
   email: string;
   city: string;
