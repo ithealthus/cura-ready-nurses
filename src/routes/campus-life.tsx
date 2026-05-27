@@ -10,13 +10,20 @@ import courseCardiac from "@/assets/course-cardiac.jpg";
 export const Route = createFileRoute("/campus-life")({
   head: () => ({
     meta: [
-      { title: "Campus Life — Cura Institutions, Bangalore" },
-      { name: "description", content: "Modern campus, skill labs, hostels, dining and a vibrant student community at Cura Institutions, Hebbal, Bangalore." },
+      { title: "Campus Life — Cura Institutions, Hebbal, Bangalore" },
+      { name: "description", content: "Modern campus, skill labs, hostels, dining, sports and a vibrant student community at Cura Institutions, Hebbal, Bangalore — integrated with the Cura Hospitals network." },
+      { name: "keywords", content: "Cura Institutions campus, nursing college hostel Bangalore, allied health skill labs, Hebbal campus, student life Cura" },
       { property: "og:title", content: "Campus Life — Cura Institutions" },
-      { property: "og:description", content: "A vibrant student community on a hospital-integrated campus." },
-      { property: "og:url", content: "/campus-life" },
+      { property: "og:description", content: "A vibrant student community on a hospital-integrated campus in Hebbal, Bangalore." },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/campus-life" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Campus Life — Cura Institutions" },
+      { name: "twitter:description", content: "Hostels, skill labs and student life on a hospital-integrated campus." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
-    links: [{ rel: "canonical", href: "/campus-life" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/campus-life" }],
   }),
   component: CampusLife,
 });
