@@ -98,7 +98,9 @@ export function LandingLeadForm({
     setSubmitting(true);
     try {
       const payload = {
-        name: form.name,
+        name: fullName,
+        firstName: form.firstName,
+        lastName: form.lastName,
         phone: form.phone,
         email: form.email,
         city: form.city,
