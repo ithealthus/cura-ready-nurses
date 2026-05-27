@@ -12,7 +12,8 @@ type Props = {
 };
 
 type FormState = {
-  name: string;
+  firstName: string;
+  lastName: string;
   phone: string;
   email: string;
   city: string;
@@ -50,7 +51,8 @@ export function LandingLeadForm({
   subheading = "Free call-back within 24 hours. Get fees, eligibility & seat availability.",
 }: Props) {
   const [form, setForm] = useState<FormState>({
-    name: "",
+    firstName: "",
+    lastName: "",
     phone: "",
     email: "",
     city: "",
@@ -62,10 +64,12 @@ export function LandingLeadForm({
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const fullName = `${form.firstName} ${form.lastName}`.trim();
+
   const waLink = useMemo(() => {
-    const msg = `Hi Cura, I'm ${form.name || "interested"} and would like info on ${form.program}. (Source: ${variant})`;
+    const msg = `Hi Cura, I'm ${fullName || "interested"} and would like info on ${form.program}. (Source: ${variant})`;
     return `https://wa.me/919019730512?text=${encodeURIComponent(msg)}`;
-  }, [form.name, form.program, variant]);
+  }, [fullName, form.program, variant]);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((f) => ({ ...f, [key]: value }));
@@ -74,12 +78,14 @@ export function LandingLeadForm({
 
   function validate(): boolean {
     const e: Errors = {};
-    if (form.name.trim().length < 2) e.name = "Please enter your full name";
+    if (form.firstName.trim().length < 2) e.firstName = "Please enter your first name";
+    if (form.lastName.trim().length < 1) e.lastName = "Please enter your last name";
     const phoneDigits = form.phone.replace(/\D/g, "");
     if (phoneDigits.length !== 10) e.phone = "Enter a valid 10-digit mobile number";
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "Enter a valid email address";
     if (form.city.trim().length < 2) e.city = "Please enter your city";
+    if (!form.program) e.program = "Select a program";
     if (!form.status) e.status = "Select your current status";
     if (!form.consent) e.consent = "Please accept to be contacted";
     setErrors(e);
@@ -92,7 +98,9 @@ export function LandingLeadForm({
     setSubmitting(true);
     try {
       const payload = {
-        name: form.name,
+        name: fullName,
+        firstName: form.firstName,
+        lastName: form.lastName,
         phone: form.phone,
         email: form.email,
         city: form.city,
@@ -134,7 +142,7 @@ export function LandingLeadForm({
         <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-secondary/15">
           <CheckCircle2 className="h-7 w-7 text-secondary" />
         </div>
-        <h3 className="mt-4 text-xl font-bold text-primary">Thank you, {form.name.split(" ")[0]}!</h3>
+        <h3 className="mt-4 text-xl font-bold text-primary">Thank you, {form.firstName || "there"}!</h3>
         <p className="mt-2 text-sm text-muted-foreground">
           Our admissions counsellor will call you on <span className="font-semibold text-foreground">+91 {form.phone.replace(/\D/g, "").slice(-10)}</span> within 24 hours.
         </p>
@@ -175,17 +183,31 @@ export function LandingLeadForm({
         <input type="hidden" name="variant" value={variant} />
 
         <div className="mt-5 grid gap-3.5">
-          <Field label="Full Name" error={errors.name} required>
-            <input
-              type="text"
-              autoComplete="name"
-              value={form.name}
-              onChange={(e) => update("name", e.target.value)}
-              placeholder="Student's full name"
-              maxLength={80}
-              className={inputCls(!!errors.name)}
-            />
-          </Field>
+          <div className="grid gap-3.5 sm:grid-cols-2">
+            <Field label="First Name" error={errors.firstName} required>
+              <input
+                type="text"
+                autoComplete="given-name"
+                value={form.firstName}
+                onChange={(e) => update("firstName", e.target.value)}
+                placeholder="First name"
+                maxLength={40}
+                className={inputCls(!!errors.firstName)}
+              />
+            </Field>
+            <Field label="Last Name" error={errors.lastName} required>
+              <input
+                type="text"
+                autoComplete="family-name"
+                value={form.lastName}
+                onChange={(e) => update("lastName", e.target.value)}
+                placeholder="Last name"
+                maxLength={40}
+                className={inputCls(!!errors.lastName)}
+              />
+            </Field>
+          </div>
+
 
           <Field label="Mobile Number" error={errors.phone} required>
             <div className="flex">
