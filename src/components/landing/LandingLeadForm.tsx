@@ -51,7 +51,8 @@ export function LandingLeadForm({
   subheading = "Free call-back within 24 hours. Get fees, eligibility & seat availability.",
 }: Props) {
   const [form, setForm] = useState<FormState>({
-    name: "",
+    firstName: "",
+    lastName: "",
     phone: "",
     email: "",
     city: "",
@@ -63,10 +64,12 @@ export function LandingLeadForm({
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const fullName = `${form.firstName} ${form.lastName}`.trim();
+
   const waLink = useMemo(() => {
-    const msg = `Hi Cura, I'm ${form.name || "interested"} and would like info on ${form.program}. (Source: ${variant})`;
+    const msg = `Hi Cura, I'm ${fullName || "interested"} and would like info on ${form.program}. (Source: ${variant})`;
     return `https://wa.me/919019730512?text=${encodeURIComponent(msg)}`;
-  }, [form.name, form.program, variant]);
+  }, [fullName, form.program, variant]);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((f) => ({ ...f, [key]: value }));
