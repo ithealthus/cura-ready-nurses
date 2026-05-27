@@ -74,15 +74,15 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
 
       <div className={`mt-5 grid gap-4 ${compact ? "" : "sm:grid-cols-2"}`}>
         <div className="space-y-1.5">
-          <Label htmlFor="fn">First Name</Label>
+          <Label htmlFor="fn">First Name <span className="text-destructive">*</span></Label>
           <Input id="fn" name="fn" required placeholder="Your first name" />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="ln">Last Name</Label>
+          <Label htmlFor="ln">Last Name <span className="text-destructive">*</span></Label>
           <Input id="ln" name="ln" required placeholder="Your last name" />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="ph">Phone</Label>
+          <Label htmlFor="ph">Phone <span className="text-destructive">*</span></Label>
           <Input id="ph" name="ph" required type="tel" placeholder="+91" />
         </div>
         <div className="space-y-1.5">
