@@ -14,17 +14,26 @@ export const Route = createFileRoute("/programs/$slug")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.program;
+    const SITE = "https://cura-ready-nurses.lovable.app";
+    const url = p ? `${SITE}/programs/${p.slug}` : `${SITE}/programs`;
+    const title = p ? `${p.name} — RGUHS Degree | Cura Institutions` : "Program — Cura Institutions";
+    const desc = p ? `${p.tagline} ${p.about}`.slice(0, 155) : "RGUHS-affiliated healthcare degree at Cura Institutions, Bangalore.";
     return {
       meta: [
-        { title: p ? `${p.name} — Cura Institutions` : "Program — Cura Institutions" },
-        { name: "description", content: p ? `${p.tagline} ${p.about}`.slice(0, 155) : "RGUHS-affiliated healthcare degree." },
-        { property: "og:title", content: p ? `${p.name} — Cura Institutions` : "Program" },
-        { property: "og:description", content: p?.tagline ?? "" },
-        { property: "og:url", content: p ? `/programs/${p.slug}` : "/programs" },
+        { title },
+        { name: "description", content: desc },
+        { name: "keywords", content: p ? `${p.name}, ${p.short}, RGUHS, Cura Institutions, allied health Bangalore, ${p.short} course Bangalore` : "RGUHS programs, Cura Institutions" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: p?.tagline ?? desc },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
         { property: "og:image", content: p?.image ?? "" },
-        { property: "twitter:image", content: p?.image ?? "" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: p?.tagline ?? desc },
+        { name: "twitter:image", content: p?.image ?? "" },
       ],
-      links: p ? [{ rel: "canonical", href: `/programs/${p.slug}` }] : [],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: ProgramDetail,
