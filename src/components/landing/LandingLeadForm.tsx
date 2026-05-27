@@ -183,17 +183,31 @@ export function LandingLeadForm({
         <input type="hidden" name="variant" value={variant} />
 
         <div className="mt-5 grid gap-3.5">
-          <Field label="Full Name" error={errors.name} required>
-            <input
-              type="text"
-              autoComplete="name"
-              value={form.name}
-              onChange={(e) => update("name", e.target.value)}
-              placeholder="Student's full name"
-              maxLength={80}
-              className={inputCls(!!errors.name)}
-            />
-          </Field>
+          <div className="grid gap-3.5 sm:grid-cols-2">
+            <Field label="First Name" error={errors.firstName} required>
+              <input
+                type="text"
+                autoComplete="given-name"
+                value={form.firstName}
+                onChange={(e) => update("firstName", e.target.value)}
+                placeholder="First name"
+                maxLength={40}
+                className={inputCls(!!errors.firstName)}
+              />
+            </Field>
+            <Field label="Last Name" error={errors.lastName} required>
+              <input
+                type="text"
+                autoComplete="family-name"
+                value={form.lastName}
+                onChange={(e) => update("lastName", e.target.value)}
+                placeholder="Last name"
+                maxLength={40}
+                className={inputCls(!!errors.lastName)}
+              />
+            </Field>
+          </div>
+
 
           <Field label="Mobile Number" error={errors.phone} required>
             <div className="flex">
