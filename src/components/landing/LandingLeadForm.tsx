@@ -310,7 +310,7 @@ export function LandingLeadForm({
 
 function inputCls(hasError: boolean) {
   return [
-    "w-full rounded-md border bg-background px-3 py-2.5 text-sm outline-none transition",
+    "w-full rounded-md border bg-background px-3 py-2.5 text-sm text-black outline-none transition",
     "focus:ring-2 focus:ring-secondary",
     hasError ? "border-destructive" : "border-input",
   ].join(" ");
