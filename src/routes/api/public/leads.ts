@@ -5,6 +5,19 @@ const SPREADSHEET_ID = "1YqVU_8RJT3ZBPwGzUtp3qN1SZNLn2-r1ba9om_rWtKw";
 const RANGE = "Sheet1!A:I";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_sheets/v4";
 
+function nowIST() {
+  return new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+}
+
 const LeadSchema = z.object({
   name: z.string().min(1).max(120),
   phone: z.string().min(7).max(20),
@@ -52,7 +65,7 @@ export const Route = createFileRoute("/api/public/leads")({
         }
         const d = parsed.data;
         const row = [
-          new Date().toISOString(),
+          nowIST(),
           d.name,
           d.phone,
           d.email,

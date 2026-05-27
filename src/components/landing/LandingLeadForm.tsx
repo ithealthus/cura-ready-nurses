@@ -114,7 +114,7 @@ export function LandingLeadForm({
       try {
         const key = "cura_leads";
         const existing = JSON.parse(localStorage.getItem(key) || "[]");
-        existing.push({ ...payload, submittedAt: new Date().toISOString() });
+        existing.push({ ...payload, submittedAt: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }) });
         localStorage.setItem(key, JSON.stringify(existing));
       } catch {
         /* ignore storage errors */
