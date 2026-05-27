@@ -22,6 +22,11 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
       { property: "og:url", content: "https://cura-ready-nurses.lovable.app/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://cura-ready-nurses.lovable.app/og-home.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
+      { name: "twitter:description", content: "8 RGUHS-affiliated allied health degrees, taught inside the Cura Hospitals network in Bangalore." },
+      { name: "twitter:image", content: "https://cura-ready-nurses.lovable.app/og-home.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/" }],
     scripts: [{
