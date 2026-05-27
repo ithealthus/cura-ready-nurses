@@ -87,11 +87,15 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="em">Email</Label>
-          <Input id="em" name="em" required type="email" placeholder="you@example.com" />
+          <Input id="em" name="em" type="email" placeholder="you@example.com" />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="city">City <span className="text-destructive">*</span></Label>
+          <Input id="city" name="city" required placeholder="e.g. Bangalore" />
         </div>
         <div className={`space-y-1.5 ${compact ? "" : "sm:col-span-2"}`}>
-          <Label>Course of Interest</Label>
-          <Select value={program} onValueChange={setProgram}>
+          <Label>Course of Interest <span className="text-destructive">*</span></Label>
+          <Select value={program} onValueChange={(v) => { setProgram(v); setProgramError(""); }}>
             <SelectTrigger><SelectValue placeholder="Select a program" /></SelectTrigger>
             <SelectContent>
               {PROGRAMS.map((p) => (
@@ -99,6 +103,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
               ))}
             </SelectContent>
           </Select>
+          {programError && <p className="text-xs font-medium text-destructive">{programError}</p>}
         </div>
         <div className={`space-y-1.5 ${compact ? "" : "sm:col-span-2"}`}>
           <Label htmlFor="msg">Message (optional)</Label>
