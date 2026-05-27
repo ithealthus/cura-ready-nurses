@@ -91,19 +91,37 @@ export function LandingLeadForm({
     if (!validate()) return;
     setSubmitting(true);
     try {
-      // Persist locally so the counsellor team can be wired up later via
-      // Lovable Cloud / CRM webhook without changing the form UX.
-      const payload = { ...form, variant, submittedAt: new Date().toISOString() };
+      const payload = {
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        city: form.city,
+        program: form.program,
+        status: form.status,
+        variant,
+        pageUrl: typeof window !== "undefined" ? window.location.href : "",
+      };
+
+      // Backup locally in case the network fails
       try {
         const key = "cura_leads";
         const existing = JSON.parse(localStorage.getItem(key) || "[]");
-        existing.push(payload);
+        existing.push({ ...payload, submittedAt: new Date().toISOString() });
         localStorage.setItem(key, JSON.stringify(existing));
       } catch {
         /* ignore storage errors */
       }
-      // Small UX delay
-      await new Promise((r) => setTimeout(r, 600));
+
+      try {
+        await fetch("/api/public/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (err) {
+        console.error("Lead submission failed", err);
+      }
+
       setSubmitted(true);
     } finally {
       setSubmitting(false);
