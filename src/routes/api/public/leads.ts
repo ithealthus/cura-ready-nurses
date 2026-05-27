@@ -65,7 +65,7 @@ export const Route = createFileRoute("/api/public/leads")({
         }
         const d = parsed.data;
         const row = [
-          new Date().toISOString(),
+          nowIST(),
           d.name,
           d.phone,
           d.email,
