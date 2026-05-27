@@ -7,13 +7,20 @@ import campusLife from "@/assets/campus-life.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Cura Institutions, Bangalore" },
-      { name: "description", content: "Cura Institutions is an RGUHS-affiliated nursing & allied health sciences college in Hebbal, Bangalore, backed by the Cura Hospitals network." },
-      { property: "og:title", content: "About Cura Institutions" },
-      { property: "og:description", content: "RGUHS college backed by the Cura Hospitals network." },
-      { property: "og:url", content: "/about" },
+      { title: "About Cura Institutions — RGUHS Allied Health College in Bangalore" },
+      { name: "description", content: "Cura Institutions is an RGUHS-affiliated nursing & allied health sciences college in Hebbal, Bangalore, backed by the Cura Hospitals network. Our vision: train 1,00,000 Allied Healthcare Professionals by 2030." },
+      { name: "keywords", content: "about Cura Institutions, RGUHS college Bangalore, allied health college Hebbal, Cura Hospitals, nursing college Bangalore" },
+      { property: "og:title", content: "About Cura Institutions — Built Inside a Hospital" },
+      { property: "og:description", content: "RGUHS college in Hebbal, Bangalore, backed by the Cura Hospitals network. Training 1,00,000 allied healthcare professionals by 2030." },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/about" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Cura Institutions" },
+      { name: "twitter:description", content: "RGUHS allied health college in Hebbal, Bangalore, backed by Cura Hospitals." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/about" }],
   }),
   component: About,
 });
