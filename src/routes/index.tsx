@@ -185,7 +185,7 @@ function Home() {
         <div className="mt-10 grid items-center gap-8 rounded-2xl bg-primary p-8 text-primary-foreground md:grid-cols-[1.4fr_1fr] md:p-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Why this matters</p>
-            <h3 className="mt-2 text-2xl font-bold md:text-3xl">A Cura allied health student spends 60% more hands-on time inside a real hospital than peers at conventional colleges.</h3>
+            <h2 className="mt-2 text-2xl font-bold md:text-3xl">A Cura allied health student spends 60% more hands-on time inside a real hospital than peers at conventional colleges.</h2>
             <p className="mt-3 text-white/80">Confidence is built in the cath-lab, the OT corridor and the imaging console — not the textbook. That's why Cura graduates step into technologist roles on day one, while others spend months adjusting.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 text-center">
