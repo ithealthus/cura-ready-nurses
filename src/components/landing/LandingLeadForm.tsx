@@ -142,7 +142,7 @@ export function LandingLeadForm({
         <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-secondary/15">
           <CheckCircle2 className="h-7 w-7 text-secondary" />
         </div>
-        <h3 className="mt-4 text-xl font-bold text-primary">Thank you, {form.name.split(" ")[0]}!</h3>
+        <h3 className="mt-4 text-xl font-bold text-primary">Thank you, {form.firstName || "there"}!</h3>
         <p className="mt-2 text-sm text-muted-foreground">
           Our admissions counsellor will call you on <span className="font-semibold text-foreground">+91 {form.phone.replace(/\D/g, "").slice(-10)}</span> within 24 hours.
         </p>
