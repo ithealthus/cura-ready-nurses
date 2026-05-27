@@ -6,13 +6,20 @@ import { EnquiryForm } from "@/components/site/EnquiryForm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Cura Institutions, Bangalore" },
-      { name: "description", content: "Visit our Hebbal, Bangalore campus or speak with an admissions counsellor at Cura Institutions." },
+      { title: "Contact Cura Institutions — Hebbal, Bangalore" },
+      { name: "description", content: "Visit our Hebbal, Bangalore campus or speak with an admissions counsellor at Cura Institutions. Call +91 90197 30512 or email info@curainstitutions.com." },
+      { name: "keywords", content: "contact Cura Institutions, Cura Institutions Bangalore address, admissions counsellor Cura, Hebbal campus contact" },
       { property: "og:title", content: "Contact Cura Institutions" },
-      { property: "og:description", content: "Visit our Hebbal campus or speak with an admissions counsellor." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:description", content: "Visit our Hebbal campus or request a callback from our admissions team." },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/contact" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact Cura Institutions" },
+      { name: "twitter:description", content: "Hebbal, Bangalore — admissions desk and campus visits." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/contact" }],
   }),
   component: Contact,
 });
