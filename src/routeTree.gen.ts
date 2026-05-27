@@ -19,6 +19,7 @@ import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as LpBscNursingSecureCareerRouteImport } from './routes/lp.bsc-nursing-secure-career'
 import { Route as LpBscNursingNeetAlternativeRouteImport } from './routes/lp.bsc-nursing-neet-alternative'
 import { Route as LpBscNursingDirectRouteImport } from './routes/lp.bsc-nursing-direct'
+import { Route as ApiPublicLeadsRouteImport } from './routes/api/public/leads'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -72,6 +73,11 @@ const LpBscNursingDirectRoute = LpBscNursingDirectRouteImport.update({
   path: '/lp/bsc-nursing-direct',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicLeadsRoute = ApiPublicLeadsRouteImport.update({
+  id: '/api/public/leads',
+  path: '/api/public/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
+  '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs': typeof ProgramsIndexRoute
+  '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
+  '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -123,6 +132,7 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
+    | '/api/public/leads'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -135,6 +145,7 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs'
+    | '/api/public/leads'
   id:
     | '__root__'
     | '/'
@@ -147,6 +158,7 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
+    | '/api/public/leads'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -160,6 +172,7 @@ export interface RootRouteChildren {
   LpBscNursingSecureCareerRoute: typeof LpBscNursingSecureCareerRoute
   ProgramsSlugRoute: typeof ProgramsSlugRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
+  ApiPublicLeadsRoute: typeof ApiPublicLeadsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -234,6 +247,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LpBscNursingDirectRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/leads': {
+      id: '/api/public/leads'
+      path: '/api/public/leads'
+      fullPath: '/api/public/leads'
+      preLoaderRoute: typeof ApiPublicLeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -248,6 +268,7 @@ const rootRouteChildren: RootRouteChildren = {
   LpBscNursingSecureCareerRoute: LpBscNursingSecureCareerRoute,
   ProgramsSlugRoute: ProgramsSlugRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
+  ApiPublicLeadsRoute: ApiPublicLeadsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
