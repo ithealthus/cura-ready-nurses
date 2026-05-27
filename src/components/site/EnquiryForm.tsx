@@ -11,6 +11,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [program, setProgram] = useState<string>("");
+  const [programError, setProgramError] = useState<string>("");
 
   if (submitted) {
     return (
@@ -26,14 +27,23 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!program) {
+      setProgramError("Please select a course");
+      return;
+    }
+    setProgramError("");
     const fd = new FormData(e.currentTarget);
     const programSlug = program;
     const programName = PROGRAMS.find((p) => p.slug === programSlug)?.name || programSlug;
+    const firstName = String(fd.get("fn") || "").trim();
+    const lastName = String(fd.get("ln") || "").trim();
     const payload = {
-      name: `${fd.get("fn") || ""} ${fd.get("ln") || ""}`.trim(),
+      name: `${firstName} ${lastName}`.trim(),
+      firstName,
+      lastName,
       phone: String(fd.get("ph") || ""),
       email: String(fd.get("em") || ""),
-      city: "",
+      city: String(fd.get("city") || ""),
       program: programName,
       status: String(fd.get("msg") || ""),
       variant: "site-enquiry",
