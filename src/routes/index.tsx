@@ -22,11 +22,11 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
       { property: "og:url", content: "https://cura-ready-nurses.lovable.app/" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://cura-ready-nurses.lovable.app/og-home.jpg" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
       { name: "twitter:description", content: "8 RGUHS-affiliated allied health degrees, taught inside the Cura Hospitals network in Bangalore." },
-      { name: "twitter:image", content: "https://cura-ready-nurses.lovable.app/og-home.jpg" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
     links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/" }],
     scripts: [{
