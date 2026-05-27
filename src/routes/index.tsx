@@ -322,7 +322,7 @@ function Home() {
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">Salary ladder</p>
-              <h3 className="mt-2 text-2xl font-bold text-primary md:text-3xl">What Cura allied health graduates earn.</h3>
+              <h2 className="mt-2 text-2xl font-bold text-primary md:text-3xl">What Cura allied health graduates earn.</h2>
             </div>
             <Link to="/programs" className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:text-secondary/80">See program-wise <ArrowRight className="h-4 w-4" /></Link>
           </div>
