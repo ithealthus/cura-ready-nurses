@@ -78,12 +78,14 @@ export function LandingLeadForm({
 
   function validate(): boolean {
     const e: Errors = {};
-    if (form.name.trim().length < 2) e.name = "Please enter your full name";
+    if (form.firstName.trim().length < 2) e.firstName = "Please enter your first name";
+    if (form.lastName.trim().length < 1) e.lastName = "Please enter your last name";
     const phoneDigits = form.phone.replace(/\D/g, "");
     if (phoneDigits.length !== 10) e.phone = "Enter a valid 10-digit mobile number";
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "Enter a valid email address";
     if (form.city.trim().length < 2) e.city = "Please enter your city";
+    if (!form.program) e.program = "Select a program";
     if (!form.status) e.status = "Select your current status";
     if (!form.consent) e.consent = "Please accept to be contacted";
     setErrors(e);
