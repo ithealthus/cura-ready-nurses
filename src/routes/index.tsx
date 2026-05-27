@@ -22,6 +22,11 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Imaging, Anaesthesia & OT, Cardiac Care, Radiotherapy, Emergency Care, Lab Tech & Physiotherapy — taught inside Cura Hospitals." },
       { property: "og:url", content: "https://cura-ready-nurses.lovable.app/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cura Institutions — Allied Healthcare, Trained Inside a Hospital" },
+      { name: "twitter:description", content: "8 RGUHS-affiliated allied health degrees, taught inside the Cura Hospitals network in Bangalore." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
     links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/" }],
     scripts: [{
@@ -180,7 +185,7 @@ function Home() {
         <div className="mt-10 grid items-center gap-8 rounded-2xl bg-primary p-8 text-primary-foreground md:grid-cols-[1.4fr_1fr] md:p-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Why this matters</p>
-            <h3 className="mt-2 text-2xl font-bold md:text-3xl">A Cura allied health student spends 60% more hands-on time inside a real hospital than peers at conventional colleges.</h3>
+            <h2 className="mt-2 text-2xl font-bold md:text-3xl">A Cura allied health student spends 60% more hands-on time inside a real hospital than peers at conventional colleges.</h2>
             <p className="mt-3 text-white/80">Confidence is built in the cath-lab, the OT corridor and the imaging console — not the textbook. That's why Cura graduates step into technologist roles on day one, while others spend months adjusting.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 text-center">
@@ -317,7 +322,7 @@ function Home() {
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">Salary ladder</p>
-              <h3 className="mt-2 text-2xl font-bold text-primary md:text-3xl">What Cura allied health graduates earn.</h3>
+              <h2 className="mt-2 text-2xl font-bold text-primary md:text-3xl">What Cura allied health graduates earn.</h2>
             </div>
             <Link to="/programs" className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:text-secondary/80">See program-wise <ArrowRight className="h-4 w-4" /></Link>
           </div>

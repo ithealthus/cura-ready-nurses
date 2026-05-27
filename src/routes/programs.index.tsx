@@ -6,13 +6,20 @@ import { PageHero } from "@/routes/about";
 export const Route = createFileRoute("/programs/")({
   head: () => ({
     meta: [
-      { title: "Programs — Cura Institutions, Bangalore" },
-      { name: "description", content: "Eight RGUHS-affiliated degree programs in Nursing & Allied Health Sciences — including BSc Nursing, MIT, AOTT, Cardiac Care, Radiotherapy, ETCT, MLT and BPT." },
+      { title: "Programs — 8 RGUHS Allied Health Degrees | Cura Institutions" },
+      { name: "description", content: "Eight RGUHS-affiliated degree programs in Nursing & Allied Health Sciences at Cura Institutions, Bangalore — BSc Nursing, MIT, AOTT, Cardiac Care, Radiotherapy, ETCT, MLT and BPT, with priority placement at Cura Hospitals." },
+      { name: "keywords", content: "RGUHS programs, BSc Nursing, MIT, AOTT, Cardiac Care Technology, Radiotherapy, ETCT, MLT, BPT, allied health degrees Bangalore" },
       { property: "og:title", content: "Programs — Cura Institutions" },
       { property: "og:description", content: "Eight RGUHS degree programs with priority placement at Cura Hospitals." },
-      { property: "og:url", content: "/programs" },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/programs" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Programs — Cura Institutions" },
+      { name: "twitter:description", content: "Eight RGUHS allied health degrees at Cura Institutions, Bangalore." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
-    links: [{ rel: "canonical", href: "/programs" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/programs" }],
   }),
   component: ProgramsIndex,
 });

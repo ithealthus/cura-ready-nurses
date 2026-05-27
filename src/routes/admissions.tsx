@@ -8,13 +8,20 @@ import { PROGRAMS } from "@/lib/programs";
 export const Route = createFileRoute("/admissions")({
   head: () => ({
     meta: [
-      { title: "Admissions — Cura Institutions, Bangalore" },
-      { name: "description", content: "RGUHS admissions for BSc Nursing, MIT, AOTT, Cardiac Care, Radiotherapy, ETCT, MLT and BPT. Eligibility, fees, and process." },
-      { property: "og:title", content: "Admissions — Cura Institutions" },
-      { property: "og:description", content: "Eligibility, process and fees for Cura Institutions' RGUHS programs." },
-      { property: "og:url", content: "/admissions" },
+      { title: "Admissions 2025–26 — Cura Institutions, Bangalore" },
+      { name: "description", content: "RGUHS admissions for BSc Nursing, MIT, AOTT, Cardiac Care, Radiotherapy, ETCT, MLT and BPT at Cura Institutions, Hebbal, Bangalore. Eligibility, fees, scholarships and a simple 4-step process." },
+      { name: "keywords", content: "Cura Institutions admissions, RGUHS admissions 2025, BSc Nursing admissions Bangalore, allied health admissions, nursing college fees, healthcare scholarships" },
+      { property: "og:title", content: "Admissions 2025–26 — Cura Institutions" },
+      { property: "og:description", content: "Eligibility, process, fees and scholarships for Cura Institutions' RGUHS allied health programs." },
+      { property: "og:url", content: "https://cura-ready-nurses.lovable.app/admissions" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Admissions 2025–26 — Cura Institutions" },
+      { name: "twitter:description", content: "Apply to RGUHS allied health programs at Cura Institutions, Bangalore." },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/197ee45f-b26a-406a-936e-908128003262/id-preview-2f589f4c--b05b5b72-9dae-418d-99ba-3b409e0806e5.lovable.app-1779775364484.png" },
     ],
-    links: [{ rel: "canonical", href: "/admissions" }],
+    links: [{ rel: "canonical", href: "https://cura-ready-nurses.lovable.app/admissions" }],
   }),
   component: Admissions,
 });
