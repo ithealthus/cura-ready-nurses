@@ -309,7 +309,38 @@ function ApplyPage() {
                   label="Stream" name="twelfth_stream" required
                   options={["Science","Commerce","Arts","Vocational"].map((v) => ({ value: v, label: v }))}
                 />
-                <Field label="Subjects studied" name="twelfth_subjects" placeholder="e.g. PCB + English" required />
+                <div className={subjects === "Other" ? "" : ""}>
+                  <SelectField
+                    label="Subjects studied" name="twelfth_subjects_choice" required
+                    value={subjects} onValueChange={(v) => { setSubjects(v); if (v !== "Other") setSubjectsOther(""); }}
+                    options={[
+                      { value: "PCB + English", label: "PCB + English (Physics, Chemistry, Biology, English)" },
+                      { value: "PCMB + English", label: "PCMB + English (Physics, Chemistry, Maths, Biology, English)" },
+                      { value: "PCM + English", label: "PCM + English (Physics, Chemistry, Maths, English)" },
+                      { value: "PCB + Computer Science", label: "PCB + Computer Science" },
+                      { value: "PCB + Psychology", label: "PCB + Psychology" },
+                      { value: "Commerce stream", label: "Commerce stream" },
+                      { value: "Arts / Humanities stream", label: "Arts / Humanities stream" },
+                      { value: "Other", label: "Other (specify)" },
+                    ]}
+                  />
+                  {subjects === "Other" && (
+                    <div className="mt-2">
+                      <Input
+                        placeholder="Enter subjects studied"
+                        value={subjectsOther}
+                        onChange={(e) => setSubjectsOther(e.target.value)}
+                        required
+                      />
+                    </div>
+                  )}
+                  <input
+                    type="hidden"
+                    name="twelfth_subjects"
+                    value={subjects === "Other" ? subjectsOther : subjects}
+                  />
+                </div>
+
                 <Field label="Physics marks" name="physics_marks" required />
                 <Field label="Chemistry marks" name="chemistry_marks" required />
                 <Field label="Biology marks" name="biology_marks" required />
