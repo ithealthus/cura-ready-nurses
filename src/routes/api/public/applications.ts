@@ -264,6 +264,7 @@ export const Route = createFileRoute("/api/public/applications")({
 
         // Build sheet row in stable column order
         const row: string[] = [
+          "=ROW()-1",
           nowIST(),
           ...TEXT_FIELDS.map((k) => data[k] || ""),
           fileLinks.photo || "",
@@ -276,7 +277,7 @@ export const Route = createFileRoute("/api/public/applications")({
           folderUrl,
         ];
 
-        const sheetsUrl = `${SHEETS_GATEWAY}/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`;
+        const sheetsUrl = `${SHEETS_GATEWAY}/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
         const sheetsRes = await fetch(sheetsUrl, {
           method: "POST",
           headers: {
