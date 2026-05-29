@@ -320,7 +320,24 @@ function ApplyPage() {
             <div className="rounded-xl border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-primary">12th Standard</h3>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <Field label="Board" name="twelfth_board" required />
+                <SelectField
+                  label="Board" name="twelfth_board" required
+                  options={[
+                    { value: "CBSE", label: "CBSE" },
+                    { value: "ICSE", label: "ICSE" },
+                    { value: "State Board - Karnataka (PUC)", label: "State Board - Karnataka (PUC)" },
+                    { value: "State Board - Andhra Pradesh", label: "State Board - Andhra Pradesh" },
+                    { value: "State Board - Tamil Nadu", label: "State Board - Tamil Nadu" },
+                    { value: "State Board - Telangana", label: "State Board - Telangana" },
+                    { value: "State Board - Maharashtra", label: "State Board - Maharashtra" },
+                    { value: "State Board - Kerala", label: "State Board - Kerala" },
+                    { value: "State Board - Other", label: "State Board - Other" },
+                    { value: "NIOS", label: "NIOS" },
+                    { value: "IB", label: "IB" },
+                    { value: "Cambridge (IGCSE / A-Level)", label: "Cambridge (IGCSE / A-Level)" },
+                    { value: "Other", label: "Other" },
+                  ]}
+                />
                 <Field label="School / college name" name="twelfth_school" required />
                 <SelectField
                   label="Stream" name="twelfth_stream" required
