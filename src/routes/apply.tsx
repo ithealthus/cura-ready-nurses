@@ -294,30 +294,30 @@ function ApplyPage() {
             <div className="rounded-xl border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-primary">10th Standard</h3>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <Field label="Board" name="tenth_board" placeholder="CBSE / ICSE / State" />
-                <Field label="School name" name="tenth_school" />
-                <Field label="Year of passing" name="tenth_year" />
+                <Field label="Board" name="tenth_board" placeholder="CBSE / ICSE / State" required />
+                <Field label="School name" name="tenth_school" required />
+                <Field label="Year of passing" name="tenth_year" required />
                 <Field label="Percentage / CGPA" name="tenth_percentage" required />
-                <div className="sm:col-span-2"><FileField label="10th marksheet" name="tenth_marksheet" /></div>
+                <div className="sm:col-span-2"><FileField label="10th marksheet" name="tenth_marksheet" required /></div>
               </div>
             </div>
             <div className="rounded-xl border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-primary">12th Standard</h3>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <Field label="Board" name="twelfth_board" />
-                <Field label="School / college name" name="twelfth_school" />
+                <Field label="Board" name="twelfth_board" required />
+                <Field label="School / college name" name="twelfth_school" required />
                 <SelectField
-                  label="Stream" name="twelfth_stream"
+                  label="Stream" name="twelfth_stream" required
                   options={["Science","Commerce","Arts","Vocational"].map((v) => ({ value: v, label: v }))}
                 />
-                <Field label="Subjects studied" name="twelfth_subjects" placeholder="e.g. PCB + English" />
-                <Field label="Physics marks" name="physics_marks" />
-                <Field label="Chemistry marks" name="chemistry_marks" />
-                <Field label="Biology marks" name="biology_marks" />
-                <Field label="English marks" name="english_marks" />
+                <Field label="Subjects studied" name="twelfth_subjects" placeholder="e.g. PCB + English" required />
+                <Field label="Physics marks" name="physics_marks" required />
+                <Field label="Chemistry marks" name="chemistry_marks" required />
+                <Field label="Biology marks" name="biology_marks" required />
+                <Field label="English marks" name="english_marks" required />
                 <Field label="Total percentage" name="twelfth_total_percentage" required />
-                <Field label="Year of passing / appearing" name="twelfth_year" />
-                <div className="sm:col-span-2"><FileField label="12th marksheet" name="twelfth_marksheet" /></div>
+                <Field label="Year of passing / appearing" name="twelfth_year" required />
+                <div className="sm:col-span-2"><FileField label="12th marksheet" name="twelfth_marksheet" required /></div>
               </div>
             </div>
           </div>
