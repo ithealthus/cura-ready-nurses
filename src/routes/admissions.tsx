@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileText, ClipboardCheck, IndianRupee, Calendar, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/routes/about";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
+import { Button } from "@/components/ui/button";
 import { PROGRAMS } from "@/lib/programs";
 
 export const Route = createFileRoute("/admissions")({
@@ -40,6 +41,15 @@ function Admissions() {
         title="Admissions 2025–26"
         subtitle="A simple four-step process to begin your RGUHS healthcare degree at Cura Institutions, Bangalore."
       />
+
+      <section className="container mx-auto -mt-6 px-4 md:px-8">
+        <div className="flex flex-wrap items-center justify-center gap-3 rounded-2xl bg-gold/15 p-5 text-center">
+          <p className="text-sm font-medium text-primary">Ready to apply? Fill the online application form now.</p>
+          <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90">
+            <Link to="/apply">Apply Now</Link>
+          </Button>
+        </div>
+      </section>
 
       <section className="container mx-auto px-4 py-16 md:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
