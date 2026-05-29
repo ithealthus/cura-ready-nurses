@@ -190,21 +190,17 @@ function ApplyPage() {
                 value={course} onValueChange={setCourse}
                 options={PROGRAMS.map((p) => ({ value: p.name, label: p.name }))}
               />
-              <SelectField
-                label="Preferred campus / location" name="preferred_campus"
-                options={[
-                  { value: "Kanakapura Road", label: "Cura Hospitals — Kanakapura Road" },
-                  { value: "Kammanahalli", label: "Cura Hospitals — Kammanahalli" },
-                  { value: "No preference", label: "No preference" },
-                ]}
-              />
-              <SelectField
-                label="Admission session / academic year" name="academic_year"
-                options={[
-                  { value: "2026-27", label: "2026-27" },
-                  { value: "2027-28", label: "2027-28" },
-                ]}
-              />
+              <div className="space-y-1.5">
+                <Label>Preferred campus / location</Label>
+                <Input value="Hebbal - Bengaluru" readOnly className="bg-muted/40" />
+                <input type="hidden" name="preferred_campus" value="Hebbal - Bengaluru" />
+              </div>
+              <div className="space-y-1.5">
+                <Label>Admission session / academic year</Label>
+                <Input value="2026-27" readOnly className="bg-muted/40" />
+                <input type="hidden" name="academic_year" value="2026-27" />
+              </div>
+
               <SelectField
                 label="Mode of admission" name="mode_of_admission"
                 options={[
