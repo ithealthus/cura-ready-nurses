@@ -69,7 +69,7 @@ function ProgramDetail() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90">
-                <Link to="/admissions">Apply for {p.short}</Link>
+                <Link to="/apply" search={{ course: p.slug }}>Apply Now</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white">
                 <Link to="/contact">Book Campus Visit</Link>
