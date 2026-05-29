@@ -14,8 +14,8 @@ export function LandingStickyCTABar() {
         <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 text-sm font-semibold text-secondary">
           <MessageCircle className="h-4 w-4" /> WhatsApp
         </a>
-        <a href="#callback" className="flex items-center justify-center bg-gold py-3 text-sm font-semibold text-gold-foreground">
-          Callback
+        <a href="/apply" className="flex items-center justify-center bg-gold py-3 text-sm font-semibold text-gold-foreground">
+          Apply Now
         </a>
       </div>
     </div>
@@ -25,10 +25,13 @@ export function LandingStickyCTABar() {
 export function LandingCTAButtons({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
-      <a href="#callback" className="inline-flex items-center justify-center rounded-md bg-gold px-5 py-3 text-sm font-semibold text-gold-foreground shadow hover:bg-gold/90">
+      <a href="/apply" className="inline-flex items-center justify-center rounded-md bg-gold px-5 py-3 text-sm font-semibold text-gold-foreground shadow hover:bg-gold/90">
+        Apply Now
+      </a>
+      <a href="#callback" className="inline-flex items-center justify-center rounded-md bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground shadow hover:bg-secondary/90">
         Request a Callback
       </a>
-      <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground shadow hover:bg-secondary/90">
+      <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-md border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/20">
         <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
       </a>
       <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2 rounded-md border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/20">
