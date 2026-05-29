@@ -41,7 +41,7 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" /> +91 90197 30512
           </a>
           <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-            <Link to="/admissions">Apply Now</Link>
+            <Link to="/apply">Apply Now</Link>
           </Button>
         </div>
 
@@ -70,7 +70,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Button asChild className="mt-2 bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              <Link to="/admissions" onClick={() => setOpen(false)}>Apply Now</Link>
+              <Link to="/apply" onClick={() => setOpen(false)}>Apply Now</Link>
             </Button>
           </nav>
         </div>

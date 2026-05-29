@@ -119,7 +119,7 @@ function Home() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                <Link to="/admissions">Start Your Application <ArrowRight className="ml-1" /></Link>
+                <Link to="/apply">Apply Now <ArrowRight className="ml-1" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white">
                 <Link to="/programs">Explore 8 Allied Programs</Link>
@@ -346,7 +346,7 @@ function Home() {
               <h2 className="mt-2 text-3xl font-bold md:text-4xl">Cura Hospitals & 50+ partner hospitals — your future workplace.</h2>
               <p className="mt-3 text-white/80">Cura's career-readiness cell engages with hospital HR teams from your second year. By the time you graduate, you've sat for multiple interviews, attended 4+ skill-assessment camps and earned BLS / ACLS / radiation-safety certifications relevant to your stream.</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90"><Link to="/admissions">Apply Now</Link></Button>
+                <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90"><Link to="/apply">Apply Now</Link></Button>
                 <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"><Link to="/campus-life">Tour Campus Life</Link></Button>
               </div>
             </div>
@@ -395,7 +395,7 @@ function Home() {
           <p className="mx-auto mt-3 max-w-xl text-white/80">Book a guided visit to the Hebbal campus and a working tour of Cura Hospitals — meet the faculty, see the labs, and walk through the actual hospital your child will train in.</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90">
-              <Link to="/admissions">Apply Now</Link>
+              <Link to="/apply">Apply Now</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white">
               <Link to="/contact"><MapPin className="mr-1 h-4 w-4" /> Book a Campus Visit</Link>

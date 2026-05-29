@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CampusLifeRouteImport } from './routes/campus-life'
+import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AdmissionsRouteImport } from './routes/admissions'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -20,6 +21,7 @@ import { Route as LpBscNursingSecureCareerRouteImport } from './routes/lp.bsc-nu
 import { Route as LpBscNursingNeetAlternativeRouteImport } from './routes/lp.bsc-nursing-neet-alternative'
 import { Route as LpBscNursingDirectRouteImport } from './routes/lp.bsc-nursing-direct'
 import { Route as ApiPublicLeadsRouteImport } from './routes/api/public/leads'
+import { Route as ApiPublicApplicationsRouteImport } from './routes/api/public/applications'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -29,6 +31,11 @@ const ContactRoute = ContactRouteImport.update({
 const CampusLifeRoute = CampusLifeRouteImport.update({
   id: '/campus-life',
   path: '/campus-life',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplyRoute = ApplyRouteImport.update({
+  id: '/apply',
+  path: '/apply',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdmissionsRoute = AdmissionsRouteImport.update({
@@ -78,11 +85,17 @@ const ApiPublicLeadsRoute = ApiPublicLeadsRouteImport.update({
   path: '/api/public/leads',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicApplicationsRoute = ApiPublicApplicationsRouteImport.update({
+  id: '/api/public/applications',
+  path: '/api/public/applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/apply': typeof ApplyRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
@@ -90,12 +103,14 @@ export interface FileRoutesByFullPath {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
+  '/api/public/applications': typeof ApiPublicApplicationsRoute
   '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/apply': typeof ApplyRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
@@ -103,6 +118,7 @@ export interface FileRoutesByTo {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs': typeof ProgramsIndexRoute
+  '/api/public/applications': typeof ApiPublicApplicationsRoute
   '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRoutesById {
@@ -110,6 +126,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/apply': typeof ApplyRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/lp/bsc-nursing-direct': typeof LpBscNursingDirectRoute
@@ -117,6 +134,7 @@ export interface FileRoutesById {
   '/lp/bsc-nursing-secure-career': typeof LpBscNursingSecureCareerRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/programs/': typeof ProgramsIndexRoute
+  '/api/public/applications': typeof ApiPublicApplicationsRoute
   '/api/public/leads': typeof ApiPublicLeadsRoute
 }
 export interface FileRouteTypes {
@@ -125,6 +143,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/admissions'
+    | '/apply'
     | '/campus-life'
     | '/contact'
     | '/lp/bsc-nursing-direct'
@@ -132,12 +151,14 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
+    | '/api/public/applications'
     | '/api/public/leads'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/admissions'
+    | '/apply'
     | '/campus-life'
     | '/contact'
     | '/lp/bsc-nursing-direct'
@@ -145,12 +166,14 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs'
+    | '/api/public/applications'
     | '/api/public/leads'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/admissions'
+    | '/apply'
     | '/campus-life'
     | '/contact'
     | '/lp/bsc-nursing-direct'
@@ -158,6 +181,7 @@ export interface FileRouteTypes {
     | '/lp/bsc-nursing-secure-career'
     | '/programs/$slug'
     | '/programs/'
+    | '/api/public/applications'
     | '/api/public/leads'
   fileRoutesById: FileRoutesById
 }
@@ -165,6 +189,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AdmissionsRoute: typeof AdmissionsRoute
+  ApplyRoute: typeof ApplyRoute
   CampusLifeRoute: typeof CampusLifeRoute
   ContactRoute: typeof ContactRoute
   LpBscNursingDirectRoute: typeof LpBscNursingDirectRoute
@@ -172,6 +197,7 @@ export interface RootRouteChildren {
   LpBscNursingSecureCareerRoute: typeof LpBscNursingSecureCareerRoute
   ProgramsSlugRoute: typeof ProgramsSlugRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
+  ApiPublicApplicationsRoute: typeof ApiPublicApplicationsRoute
   ApiPublicLeadsRoute: typeof ApiPublicLeadsRoute
 }
 
@@ -189,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/campus-life'
       fullPath: '/campus-life'
       preLoaderRoute: typeof CampusLifeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apply': {
+      id: '/apply'
+      path: '/apply'
+      fullPath: '/apply'
+      preLoaderRoute: typeof ApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admissions': {
@@ -254,6 +287,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicLeadsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/applications': {
+      id: '/api/public/applications'
+      path: '/api/public/applications'
+      fullPath: '/api/public/applications'
+      preLoaderRoute: typeof ApiPublicApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -261,6 +301,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AdmissionsRoute: AdmissionsRoute,
+  ApplyRoute: ApplyRoute,
   CampusLifeRoute: CampusLifeRoute,
   ContactRoute: ContactRoute,
   LpBscNursingDirectRoute: LpBscNursingDirectRoute,
@@ -268,18 +309,9 @@ const rootRouteChildren: RootRouteChildren = {
   LpBscNursingSecureCareerRoute: LpBscNursingSecureCareerRoute,
   ProgramsSlugRoute: ProgramsSlugRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
+  ApiPublicApplicationsRoute: ApiPublicApplicationsRoute,
   ApiPublicLeadsRoute: ApiPublicLeadsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
