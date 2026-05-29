@@ -292,7 +292,6 @@ function ApplyPage() {
           <div className="space-y-6">
             <SectionHeader n={5} title="Academic Details" />
             <div className="rounded-xl border border-border bg-surface p-5">
-            <div className="rounded-xl border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-primary">10th Standard</h3>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <Field label="Board" name="tenth_board" placeholder="CBSE / ICSE / State" required />
@@ -321,6 +320,7 @@ function ApplyPage() {
                 <div className="sm:col-span-2"><FileField label="12th marksheet" name="twelfth_marksheet" required /></div>
               </div>
             </div>
+          </div>
 
           {/* SECTION 6 */}
           <div className="space-y-6">
