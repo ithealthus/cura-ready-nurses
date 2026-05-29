@@ -119,6 +119,9 @@ function ApplyPage() {
   const [error, setError] = useState("");
   const [consent, setConsent] = useState(false);
   const [declared, setDeclared] = useState(false);
+  const [subjects, setSubjects] = useState("");
+  const [subjectsOther, setSubjectsOther] = useState("");
+
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
