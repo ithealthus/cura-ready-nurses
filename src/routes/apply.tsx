@@ -293,7 +293,24 @@ function ApplyPage() {
             <div className="rounded-xl border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-primary">10th Standard</h3>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <Field label="Board" name="tenth_board" placeholder="CBSE / ICSE / State" required />
+                <SelectField
+                  label="Board" name="tenth_board" required
+                  options={[
+                    { value: "CBSE", label: "CBSE" },
+                    { value: "ICSE", label: "ICSE" },
+                    { value: "State Board - Karnataka (PUC)", label: "State Board - Karnataka (PUC)" },
+                    { value: "State Board - Andhra Pradesh", label: "State Board - Andhra Pradesh" },
+                    { value: "State Board - Tamil Nadu", label: "State Board - Tamil Nadu" },
+                    { value: "State Board - Telangana", label: "State Board - Telangana" },
+                    { value: "State Board - Maharashtra", label: "State Board - Maharashtra" },
+                    { value: "State Board - Kerala", label: "State Board - Kerala" },
+                    { value: "State Board - Other", label: "State Board - Other" },
+                    { value: "NIOS", label: "NIOS" },
+                    { value: "IB", label: "IB" },
+                    { value: "Cambridge (IGCSE / A-Level)", label: "Cambridge (IGCSE / A-Level)" },
+                    { value: "Other", label: "Other" },
+                  ]}
+                />
                 <Field label="School name" name="tenth_school" required />
                 <Field label="Year of passing" name="tenth_year" required />
                 <Field label="Percentage / CGPA" name="tenth_percentage" required />
