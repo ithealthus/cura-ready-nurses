@@ -119,6 +119,9 @@ function ApplyPage() {
   const [error, setError] = useState("");
   const [consent, setConsent] = useState(false);
   const [declared, setDeclared] = useState(false);
+  const [subjects, setSubjects] = useState("");
+  const [subjectsOther, setSubjectsOther] = useState("");
+
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -190,21 +193,17 @@ function ApplyPage() {
                 value={course} onValueChange={setCourse}
                 options={PROGRAMS.map((p) => ({ value: p.name, label: p.name }))}
               />
-              <SelectField
-                label="Preferred campus / location" name="preferred_campus"
-                options={[
-                  { value: "Kanakapura Road", label: "Cura Hospitals — Kanakapura Road" },
-                  { value: "Kammanahalli", label: "Cura Hospitals — Kammanahalli" },
-                  { value: "No preference", label: "No preference" },
-                ]}
-              />
-              <SelectField
-                label="Admission session / academic year" name="academic_year"
-                options={[
-                  { value: "2026-27", label: "2026-27" },
-                  { value: "2027-28", label: "2027-28" },
-                ]}
-              />
+              <div className="space-y-1.5">
+                <Label>Preferred campus / location</Label>
+                <Input value="Hebbal - Bengaluru" readOnly className="bg-muted/40" />
+                <input type="hidden" name="preferred_campus" value="Hebbal - Bengaluru" />
+              </div>
+              <div className="space-y-1.5">
+                <Label>Admission session / academic year</Label>
+                <Input value="2026-27" readOnly className="bg-muted/40" />
+                <input type="hidden" name="academic_year" value="2026-27" />
+              </div>
+
               <SelectField
                 label="Mode of admission" name="mode_of_admission"
                 options={[
@@ -310,7 +309,38 @@ function ApplyPage() {
                   label="Stream" name="twelfth_stream" required
                   options={["Science","Commerce","Arts","Vocational"].map((v) => ({ value: v, label: v }))}
                 />
-                <Field label="Subjects studied" name="twelfth_subjects" placeholder="e.g. PCB + English" required />
+                <div className={subjects === "Other" ? "" : ""}>
+                  <SelectField
+                    label="Subjects studied" name="twelfth_subjects_choice" required
+                    value={subjects} onValueChange={(v) => { setSubjects(v); if (v !== "Other") setSubjectsOther(""); }}
+                    options={[
+                      { value: "PCB + English", label: "PCB + English (Physics, Chemistry, Biology, English)" },
+                      { value: "PCMB + English", label: "PCMB + English (Physics, Chemistry, Maths, Biology, English)" },
+                      { value: "PCM + English", label: "PCM + English (Physics, Chemistry, Maths, English)" },
+                      { value: "PCB + Computer Science", label: "PCB + Computer Science" },
+                      { value: "PCB + Psychology", label: "PCB + Psychology" },
+                      { value: "Commerce stream", label: "Commerce stream" },
+                      { value: "Arts / Humanities stream", label: "Arts / Humanities stream" },
+                      { value: "Other", label: "Other (specify)" },
+                    ]}
+                  />
+                  {subjects === "Other" && (
+                    <div className="mt-2">
+                      <Input
+                        placeholder="Enter subjects studied"
+                        value={subjectsOther}
+                        onChange={(e) => setSubjectsOther(e.target.value)}
+                        required
+                      />
+                    </div>
+                  )}
+                  <input
+                    type="hidden"
+                    name="twelfth_subjects"
+                    value={subjects === "Other" ? subjectsOther : subjects}
+                  />
+                </div>
+
                 <Field label="Physics marks" name="physics_marks" required />
                 <Field label="Chemistry marks" name="chemistry_marks" required />
                 <Field label="Biology marks" name="biology_marks" required />
