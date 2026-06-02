@@ -105,7 +105,7 @@ function SelectField({
           ))}
         </SelectContent>
       </Select>
-      <input type="hidden" name={name} value={val} required={required} />
+      <input type="hidden" name={name} value={val} data-required={required ? "true" : undefined} data-label={label} />
     </div>
   );
 }
@@ -132,6 +132,21 @@ function ApplyPage() {
     if (!course) { setError("Please select a course."); return; }
 
     const form = e.currentTarget;
+
+    // Validate required SelectField hidden inputs (browsers can't validate hidden required)
+    const requiredHidden = form.querySelectorAll<HTMLInputElement>('input[type="hidden"][data-required="true"]');
+    for (const el of Array.from(requiredHidden)) {
+      if (!el.value.trim()) {
+        setError(`Please select "${el.dataset.label || el.name}".`);
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+    }
+    if (subjects === "Other" && !subjectsOther.trim()) {
+      setError("Please specify the subjects studied.");
+      return;
+    }
+
     const fd = new FormData(form);
     fd.set("course", course);
     fd.set("page_url", typeof window !== "undefined" ? window.location.href : "");
